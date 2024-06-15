@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | ShamsBuilds</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.6.22/css/uikit.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <!-- Dark Mode Toggle Button -->
+    <button id="theme-toggle" class="theme-toggle">
+        <i class="fas fa-moon"></i><span class="toggle-text"></span>
+    </button>
+
+    <!-- Navbar -->
+    <div class="navbar uk-navbar-container uk-navbar-transparent">
+        <div class="uk-container uk-flex uk-flex-between">
+            <a class="uk-navbar-item uk-logo" href="#">SHAM AH.</a>
+            <a href="#offcanvas-nav" uk-toggle class="uk-navbar-toggle"><i class="fas fa-bars"></i></a>
+        </div>
+    </div>
+
+    <!-- Offcanvas Sidebar -->
+    <div id="offcanvas-nav" uk-offcanvas="mode: slide; overlay: true; flip: true">
+        <div class="uk-offcanvas-bar">
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+            <ul class="uk-nav uk-nav-default">
+                <li><a href="#"><i class="fab fa-github"></i> GitHub</a></li>
+                <li><a href="#"><i class="fas fa-file-alt"></i> Resume</a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <canvas id="herogradient-canvas" data-transition-in="true" data-js-darken-top></canvas>
+
+        <div class="content">
+            <h1>WELCOME!</h1>
+            <p>I'm Shams, a <span class="typewriter"
+                    data-text='["Full-Stack Developer", "DIYer", "Electronics Geek", "Entrepreneur", "Lifelong Learner", "Photographer", "Videographer", "Graphic Designer"]'></span>
+            </p>
+            <div class="buttons">
+                <a href="#" class="uk-button uk-button-default uk-margin-small-right"><i class="fab fa-github"></i>
+                    GitHub</a>
+                <a href="#" class="uk-button uk-button-default uk-margin-small-right"><i class="fas fa-file-alt"></i>
+                    Resume</a>
+                <a href="#" class="uk-button uk-button-default"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="about-section" id="about">
+        <div class="uk-container uk-grid uk-flex-middle">
+            <div class="uk-width-1-2@m">
+                <div class="slideshow-container">
+                    <input type="radio" name="slider" id="slide-1" checked>
+                    <input type="radio" name="slider" id="slide-2">
+                    <input type="radio" name="slider" id="slide-3">
+                    <div class="cards">
+                        <label class="card" for="slide-1" id="item-1">
+                            <img src="https://picsum.photos/id/116/200/300" alt="slide-1">
+                        </label>
+                        <label class="card" for="slide-2" id="item-2">
+                            <img src="https://picsum.photos/id/171/200/300" alt="slide-2">
+                        </label>
+                        <label class="card" for="slide-3" id="item-3">
+                            <img src="https://picsum.photos/id/366/200/300" alt="slide-3">
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-width-1-2@m">
+                <h2>About Me</h2>
+                <div class="text-content">
+                    <div class="text-slide" id="text-slide-1">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel
+                            scelerisque nisl consectetur et.</p>
+                        <ul>
+                            <li>Velit esse cillum dolore eu fugiat nulla pariatur.</li>
+                            <li>Velit esse cillum dolore eu fugiat nulla pariatur.</li>
+                            <li>Velit esse cillum dolore eu fugiat nulla pariatur.</li>
+                        </ul>
+                    </div>
+                    <div class="text-slide" id="text-slide-2">
+                        <p>Sed posuere consectetur est at lobortis. Nulla vitae elit libero, a pharetra augue.</p>
+                        <ul>
+                            <li>Velit esse cillum dolore eu fugiat nulla pariatur.</li>
+                            <li>Velit esse cillum dolore eu fugiat nulla pariatur.</li>
+                            <li>Velit esse cillum dolore eu fugiat nulla pariatur.</li>
+                        </ul>
+                    </div>
+                    <div class="text-slide" id="text-slide-3">
+                        <p>Curabitur blandit tempus porttitor. Maecenas faucibus mollis interdum. Vivamus sagittis lacus
+                            vel augue laoreet rutrum faucibus dolor auctor.</p>
+                        <ul>
+                            <li>Velit esse cillum dolore eu fugiat nulla pariatur.</li>
+                            <li>Velit esse cillum dolore eu fugiat nulla pariatur.</li>
+                            <li>Velit esse cillum dolore eu fugiat nulla pariatur.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.6.22/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.6.22/js/uikit-icons.min.js"></script>
+    <script src="assets/js/typewriter.js"></script>
+    <script src="assets/js/slideshow.js"></script>
+    <script src="assets/js/gradient.js"></script>
+    <script>
+        var gradient = new Gradient();
+        gradient.initGradient("#herogradient-canvas");
+    </script>
+    <script src="assets/js/themetoggler.js"></script>
+</body>
+
+</html>
