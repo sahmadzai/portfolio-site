@@ -46,6 +46,7 @@ if (currentTheme == "dark") {
   }, 1500);
 }
 
+// On click, toggle between light and dark themes
 themeToggleButton.addEventListener("click", function () {
   themeToggleButton.classList.add("show-text");
   if (document.body.classList.contains("dark-theme")) {
@@ -69,4 +70,14 @@ themeToggleButton.addEventListener("click", function () {
     }, 1500);
     localStorage.setItem("theme", "dark");
   }
+});
+
+// On hover show text
+themeToggleButton.addEventListener("mouseenter", function () {
+  themeToggleButton.classList.add("show-text");
+});
+
+// On mouse leave hide text
+themeToggleButton.addEventListener("mouseleave", function () {
+  themeToggleButton.classList.remove("show-text");
 });

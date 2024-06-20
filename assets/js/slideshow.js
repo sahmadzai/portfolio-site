@@ -26,12 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let autoSlide = setInterval(showNextSlide, 6000);
 
-  const container = document.querySelector(".slideshow-container");
-  container.addEventListener("mouseover", () => clearInterval(autoSlide));
-  container.addEventListener("mouseout", () => {
-    autoSlide = setInterval(showNextSlide, 6000);
-  });
-
   // Initialize the text for the first slide
   updateTextSlide();
 });

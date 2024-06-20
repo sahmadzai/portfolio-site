@@ -7,6 +7,11 @@
     <title>Welcome | ShamsBuilds</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.6.22/css/uikit.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap" rel="stylesheet">
+    <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
@@ -18,9 +23,9 @@
 
     <!-- Navbar -->
     <div class="navbar uk-navbar-container uk-navbar-transparent">
-        <div class="uk-container uk-flex uk-flex-between">
-            <a class="uk-navbar-item uk-logo" href="#">SHAM AH.</a>
-            <a href="#offcanvas-nav" uk-toggle class="uk-navbar-toggle"><i class="fas fa-bars"></i></a>
+        <div class="uk-container uk-container-expand uk-flex uk-flex-between">
+            <a class="uk-navbar-item uk-logo" href="#">SHAMS AH.</a>
+            <a class="nav-menu" href="#offcanvas-nav" uk-toggle class="uk-navbar-toggle"><i class="fas fa-bars"></i></a>
         </div>
     </div>
 
@@ -37,27 +42,26 @@
     </div>
 
     <!-- Hero Section -->
-    <div class="hero">
+    <div class="hero animated-section">
         <canvas id="herogradient-canvas" data-transition-in="true" data-js-darken-top></canvas>
-
         <div class="content">
             <h1>WELCOME!</h1>
             <p>I'm Shams, a <span class="typewriter"
-                    data-text='["Full-Stack Developer", "DIYer", "Electronics Geek", "Entrepreneur", "Lifelong Learner", "Photographer", "Videographer", "Graphic Designer"]'></span>
+                    data-text='["full-stack developer", "DIYer", "electronics geek", "entrepreneur", "lifelong learner", "photographer", "videographer", "graphic designer"]'></span>!
             </p>
             <div class="buttons">
-                <a href="#" class="uk-button uk-button-default uk-margin-small-right"><i class="fab fa-github"></i>
-                    GitHub</a>
-                <a href="#" class="uk-button uk-button-default uk-margin-small-right"><i class="fas fa-file-alt"></i>
-                    Resume</a>
-                <a href="#" class="uk-button uk-button-default"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="#" class="uk-button uk-button-default uk-margin-small-right fade-border"><i
+                        class="fab fa-github"></i> GitHub</a>
+                <a href="#" class="uk-button uk-button-default uk-margin-small-right fade-border"><i
+                        class="fas fa-file-alt"></i> Resume</a>
+                <a href="#" class="uk-button uk-button-default fade-border"><i class="fab fa-linkedin"></i> LinkedIn</a>
             </div>
         </div>
     </div>
 
     <!-- About Section -->
-    <div class="about-section" id="about">
-        <div class="uk-container uk-grid uk-flex-middle">
+    <div class="about-section animated-section" id="about">
+        <div class="uk-container uk-grid uk-flex-middle uk-container-expand">
             <div class="uk-width-1-2@m">
                 <div class="slideshow-container">
                     <input type="radio" name="slider" id="slide-1" checked>
@@ -65,19 +69,19 @@
                     <input type="radio" name="slider" id="slide-3">
                     <div class="cards">
                         <label class="card" for="slide-1" id="item-1">
-                            <img src="https://picsum.photos/id/116/200/300" alt="slide-1">
+                            <img src="https://picsum.photos/id/116/400/550" alt="slide-1">
                         </label>
                         <label class="card" for="slide-2" id="item-2">
-                            <img src="https://picsum.photos/id/171/200/300" alt="slide-2">
+                            <img src="https://picsum.photos/id/171/400/550" alt="slide-2">
                         </label>
                         <label class="card" for="slide-3" id="item-3">
-                            <img src="https://picsum.photos/id/366/200/300" alt="slide-3">
+                            <img src="https://picsum.photos/id/366/400/550" alt="slide-3">
                         </label>
                     </div>
                 </div>
             </div>
             <div class="uk-width-1-2@m">
-                <h2>About Me</h2>
+                <h2 class="about-title">About Me</h2>
                 <div class="text-content">
                     <div class="text-slide" id="text-slide-1">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel
@@ -110,9 +114,407 @@
         </div>
     </div>
 
+    <!-- My Skillset Section -->
+    <div class="skillset-section animated-section" id="skillset">
+        <div class="uk-container">
+            <h2 class="skillset-title">My Skillset</h2>
+            <div class="view-toggle">
+                <button id="carousel-view" class="view-btn active">Carousel</button>
+                <button id="list-view" class="view-btn">List</button>
+            </div>
+            <div class="skillset-content">
+                <div class="carousel-view active">
+                    <!-- Languages and Frameworks -->
+                    <div class="langandframe carousel">
+                        <h3 class="carousel-title">Languages & Frameworks</h3>
+                        <div class="carousel-container uk-position-relative uk-visible-toggle uk-light"
+                            uk-slider="autoplay: true; autoplay-interval: 0; velocity: 0.06; easing: linear;"
+                            tabindex="-1">
+                            <ul class="uk-slider-items uk-child-width-1-4@m uk-grid">
+                                <li>
+                                    <img src="assets/imgs/langandframe/react.svg" alt="React">
+                                    <h3>React</h3>
+                                </li>
+                                <li>
+                                    <img src="assets/imgs/langandframe/react.svg" alt="React Native">
+                                    <h3>React Native</h3>
+                                </li>
+                                <li>
+                                    <img src="assets/imgs/langandframe/nodejs.svg" alt="Node.js">
+                                    <h3>Node.js</h3>
+                                </li>
+                                <li>
+                                    <img src="assets/imgs/langandframe/html5.svg" alt="HTML">
+                                    <h3>HTML</h3>
+                                </li>
+                                <li>
+                                    <img src="assets/imgs/langandframe/css3.svg" alt="CSS">
+                                    <h3>CSS</h3>
+                                </li>
+                                <li>
+                                    <img src="assets/imgs/langandframe/bootstrap.svg" alt="Bootstrap">
+                                    <h3>Bootstrap</h3>
+                                </li>
+                                <li>
+                                    <img src="assets/imgs/langandframe/uikit.svg" alt="UIKit">
+                                    <h3>UIKit</h3>
+                                </li>
+                                <li>
+                                    <img src="assets/imgs/langandframe/sqldb.svg" alt="SQL">
+                                    <h3>SQL</h3>
+                                </li>
+                                <li>
+                                    <img src="assets/imgs/langandframe/php.png" alt="PHP">
+                                    <h3>PHP</h3>
+                                </li>
+                                <li>
+                                    <img src="assets/imgs/langandframe/java.svg" alt="Java">
+                                    <h3>Java</h3>
+                                </li>
+                                <li>
+                                    <img src="assets/imgs/langandframe/javascript.svg" alt="JavaScript">
+                                    <h3>JavaScript</h3>
+                                </li>
+                                <li>
+                                    <img src="assets/imgs/langandframe/python.svg" alt="Python">
+                                    <h3>Python</h3>
+                                </li>
+                                <li>
+                                    <img src="assets/imgs/langandframe/c.svg" alt="C">
+                                    <h3>C</h3>
+                                </li>
+                                <li>
+                                    <img src="assets/imgs/langandframe/cpp.svg" alt="C++">
+                                    <h3>C++</h3>
+                                </li>
+                                <li>
+                                    <img src="assets/imgs/langandframe/swift.svg" alt="Swift">
+                                    <h3>Swift</h3>
+                                </li>
+                                <li>
+                                    <img src="assets/imgs/langandframe/kotlin.svg" alt="Kotlin">
+                                    <h3>Kotlin</h3>
+                                </li>
+                                <li>
+                                    <img src="assets/imgs/langandframe/bash.svg" alt="Bash">
+                                    <h3>Bash</h3>
+                                </li>
+                                <li>
+                                    <img src="assets/imgs/langandframe/restapi.svg" alt="REST APIs">
+                                    <h3>REST APIs</h3>
+                                </li>
+                            </ul>
+                            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#"
+                                uk-slidenav-previous uk-slider-item="previous"></a>
+                            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#"
+                                uk-slidenav-next uk-slider-item="next"></a>
+                        </div>
+                    </div>
+                    <!-- Software and Applications -->
+                    <div class="softandapp carousel">
+                        <h3 class="carousel-title">Software and Applications</h3>
+                        <div class="carousel-container uk-position-relative uk-visible-toggle uk-light"
+                            uk-slider="autoplay: true; autoplay-interval: 0; velocity: 0.06; easing: linear; center: true;"
+                            tabindex="-1">
+                            <ul class="uk-slider-items uk-child-width-1-4@m uk-grid">
+                                <li>
+                                    <img src="assets/imgs/softandapp/git.svg" alt="Git">
+                                    <h3>Git</h3>
+                                </li>
+                                <li>
+                                    <img src="assets/imgs/softandapp/figma.svg" alt="Figma">
+                                    <h3>Figma</h3>
+                                </li>
+                                <li>
+                                    <img src="assets/imgs/softandapp/webflow.svg" alt="WebFlow">
+                                    <h3>WebFlow</h3>
+                                </li>
+                                <li>
+                                    <img src="assets/imgs/softandapp/linux.svg" alt="Unix/Linux">
+                                    <h3>Unix/Linux</h3>
+                                </li>
+                                <li>
+                                    <img src="assets/imgs/softandapp/terminal.svg" alt="Command Line">
+                                    <h3>Command Line</h3>
+                                </li>
+                                <li>
+                                    <img src="assets/imgs/softandapp/xcode.svg" alt="Xcode">
+                                    <h3>Xcode</h3>
+                                </li>
+                                <li>
+                                    <img src="assets/imgs/softandapp/androidstudio.svg" alt="Android Studio">
+                                    <h3>Android Studio</h3>
+                                </li>
+                                <li>
+                                    <img src="assets/imgs/softandapp/vscode.svg" alt="Visual Studio Code">
+                                    <h3>Visual Studio Code</h3>
+                                </li>
+                                <li>
+                                    <img src="assets/imgs/softandapp/mspowerplatform.svg.png" alt="Microsoft Power
+                                    Platform">
+                                    <h3>Microsoft Power Platform</h3>
+                                </li>
+                                <li>
+                                    <img src="assets/imgs/softandapp/illustrator.svg" alt="Adobe Illustrator">
+                                    <h3>Adobe Illustrator</h3>
+                                </li>
+                                <li>
+                                    <img src="assets/imgs/softandapp/photoshop.svg" alt="Adobe Photoshop">
+                                    <h3>Adobe Photoshop</h3>
+                                </li>
+                                <li>
+                                    <img src="assets/imgs/softandapp/premierepro.svg" alt="Adobe Premiere Pro">
+                                    <h3>Adobe Premiere Pro</h3>
+                                </li>
+                                <li>
+                                    <img src="assets/imgs/softandapp/fusion360.png" alt="Autodesk Fusion 360">
+                                    <h3>Autodesk Fusion 360</h3>
+                                </li>
+                                <li>
+                                    <img src="assets/imgs/softandapp/eagle.png" alt="Autodesk Eagle">
+                                    <h3>Autodesk Eagle</h3>
+                                </li>
+                                <li>
+                                    <img src="assets/imgs/softandapp/office.svg" alt="Microsoft Office Suite">
+                                    <h3>Microsoft Office Suite</h3>
+                                </li>
+                                <li>
+                                    <img src="assets/imgs/softandapp/gsuite.svg" alt="Google Workspace">
+                                    <h3>Google Suite</h3>
+                                </li>
+                                <li>
+                                    <img src="assets/imgs/softandapp/slack.svg" alt="Slack">
+                                    <h3>Slack</h3>
+                                </li>
+                                <li>
+                                    <img src="assets/imgs/softandapp/msteams.svg" alt="Microsoft Teams">
+                                    <h3>Microsoft Teams</h3>
+                                </li>
+                            </ul>
+                            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#"
+                                uk-slidenav-previous uk-slider-item="previous"></a>
+                            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#"
+                                uk-slidenav-next uk-slider-item="next"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-view">
+                    <div class="langandframe">
+                        <h3 class="list-title">Languages & Frameworks</h3>
+                        <div class="list">
+                            <ul class="list-items">
+                                <li>React</li>
+                                <li>React Native</li>
+                                <li>Node.js</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>Bootstrap</li>
+                                <li>UIKit</li>
+                                <li>SQL</li>
+                                <li>PHP</li>
+                            </ul>
+                            <ul class="list-items">
+                                <li>Java</li>
+                                <li>JavaScript</li>
+                                <li>Python</li>
+                                <li>C</li>
+                                <li>C++</li>
+                                <li>Swift</li>
+                                <li>Kotlin</li>
+                                <li>Bash</li>
+                                <li>REST APIs</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr class="vertical-divider" />
+                    <div class="softandapp">
+                        <h3 class="list-title">Software and Applications</h3>
+                        <div class="list">
+                            <ul class="list-items">
+                                <li>Git</li>
+                                <li>Figma</li>
+                                <li>WebFlow</li>
+                                <li>Unix/Linux</li>
+                                <li>Command Line</li>
+                                <li>Xcode</li>
+                                <li>Android Studio</li>
+                                <li>Visual Studio Code</li>
+                                <li>Microsoft Power Platform</li>
+                            </ul>
+                            <ul class="list-items">
+                                <li>Adobe Illustrator</li>
+                                <li>Adobe Photoshop</li>
+                                <li>Adobe Premiere Pro</li>
+                                <li>Autodesk Fusion 360</li>
+                                <li>Autodesk Eagle</li>
+                                <li>Microsoft Office Suite</li>
+                                <li>Google Workspace</li>
+                                <li>Slack</li>
+                                <li>Microsoft Teams</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Current Project Section -->
+    <div class="currentproject-section" id="current-project">
+        <div class="uk-container">
+            <h2 class="currentproject-title">Current Project</h2>
+            <div class="currentproject-content">
+                <div class="currentproject-card">
+                    <div class="currentproject-image">
+                        <img src="assets/imgs/yokedappicon.jpg"
+                            alt="App icon for YOKED!, which is the current project Shamsullah Ahmadzai is working on.">
+                        <div class="currentproject-actions">
+                            <a href="#" class="uk-button uk-button-default uk-margin-small-right fade-border"><i
+                                    class="fas fa-eye"></i> View</a>
+                            <a href="#" class="uk-button uk-button-default fade-border"><i class="fas fa-code"></i>
+                                Source</a>
+                        </div>
+                    </div>
+                    <div class="currentproject-info">
+                        <h3>YOKED!</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Pharetra et ultrices neque ornare aenean euismod. Maecenas
+                            pharetra convallis posuere morbi leo urna molestie.</p>
+                        <ul>
+                            <li>Velit esse cillum dolore eu fugiat nulla pariatur.</li>
+                            <li>Velit esse cillum dolore eu fugiat nulla pariatur.</li>
+                            <li>Velit esse cillum dolore eu fugiat nulla pariatur.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Experience Section -->
+    <div class="experience-section animated-section" id="experience">
+        <div class="uk-container">
+            <h2 class="experience-title">Experience</h2>
+            <div class="experience-content">
+                <div class="timeline">
+                    <div class="circle"></div>
+                    <svg id="animated-edge" viewBox="0 0 20 884" width="20" height="884" class="ml-4 block"
+                        aria-hidden="true">
+                        <path d="M 1 0V -36 l 18 24 V 707.2 l -18 24V 884" fill="none" stroke="#9091A0"
+                            stroke-opacity="0.16"></path>
+                        <path d="M 1 0V -36 l 18 24 V 707.2 l -18 24V 884" fill="none" stroke="rgba(255,195,0, 0.4)"
+                            stroke-width="2.5" class="motion-reduce:hidden"
+                            style="stroke-dasharray: 0; stroke-dashoffset: -150;"></path>
+                        <defs>
+                            <linearGradient id="gradient" gradientUnits="userSpaceOnUse" x1="0" x2="0" y1="50" y2="50">
+                                <stop stop-color="#18CCFC" stop-opacity="0.4"></stop>
+                                <stop stop-color="#18CCFC" stop-opacity="0.4"></stop>
+                                <stop offset="0.325" stop-color="#6344F5" stop-opacity="0.4"></stop>
+                                <stop offset="1" stop-color="#AE48FF" stop-opacity="0.4"></stop>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="experiences">
+                    <!-- Experience 1 -->
+                    <div class="experience-item">
+                        <h3>Unison Global</h3>
+                        <h4>Technical Consultant (Aug 2024 - Present)</h4>
+                        <ul>
+                            <li>Develop and maintain ETL scripts using SQL to support simultaneous data migration
+                                projects, adapting to dynamic client requirements.</li>
+                            <li>Transform large datasets from data loader templates, mapping and loading data into PRISM
+                                databases to ensure seamless integration.</li>
+                            <li>Create and modify SQL scripts to filter, format, and configure raw data from
+                                spreadsheets, ensuring accurate and reliable data migration.</li>
+                        </ul>
+                    </div>
+                    <!-- Experience 2 -->
+                    <div class="experience-item">
+                        <h3>W&M Entrepreneurship Hub</h3>
+                        <h4>Tech Partner (Jan 2023 - Dec 2023)</h4>
+                        <ul>
+                            <li>Implemented multiple automated workflows to significantly reduce the time and effort
+                                required for repetitive tasks, enhancing overall efficiency.</li>
+                            <li>Collaborated closely with stakeholders to develop a chatbot that boosts student
+                                engagement and interaction with the center, resulting in a more positive user
+                                experience.</li>
+                            <li>Designed and implemented automated formatting and data presentation processes to improve
+                                data usability and enhance the overall user experience.</li>
+                            <li>Provided effective technical support to resolve issues promptly, ensuring all
+                                stakeholders could continue their work without interruption.</li>
+                            <li>Mentored team members in the use of technology, leading to increased knowledge, improved
+                                skills, and enhanced productivity and efficiency.</li>
+                        </ul>
+                    </div>
+                    <!-- Experience 3 -->
+                    <div class="experience-item">
+                        <h3>Digital Key, LLC</h3>
+                        <h4>Founder & Consultant (Jul 2022 - Present)</h4>
+                        <ul>
+                            <li>Oversee all aspects of business operations, including financial management, sales,
+                                marketing, and new business development, ensuring the company's growth and stability.
+                            </li>
+                            <li>Lead software development efforts, utilizing technologies such as PHP, HTML5, CSS, SQL,
+                                React.js, JavaScript, and MySQL to create secure, reliable, and user-friendly products
+                                that meet clients' needs.</li>
+                            <li>Develop and implement effective sales and marketing strategies to drive business growth
+                                and maintain positive relationships with clients.</li>
+                            <li>Provide technical expertise and support to clients, addressing and resolving technical
+                                issues promptly and efficiently.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="contact-section" id="contact">
+        <div class="uk-container">
+            <h2 class="contact-title">Get in Touch</h2>
+            <form action="contact.php" method="post" class="contact-form">
+                <div class="uk-margin">
+                    <label for="name" class="uk-form-label">Name</label>
+                    <input class="uk-input" type="text" id="name" name="name" placeholder="John Doe" required>
+                </div>
+                <div class="uk-margin">
+                    <label for="email" class="uk-form-label">Email</label>
+                    <input class="uk-input" type="email" id="email" name="email" placeholder="johndoe@myemail.com"
+                        required>
+                </div>
+                <div class="uk-margin">
+                    <label for="message" class="uk-form-label">Message</label>
+                    <textarea class="uk-textarea" id="message" name="message" rows="5"
+                        placeholder="Let loose your questions and inquiries!" required></textarea>
+                </div>
+                <div class="uk-margin">
+                    <button class="uk-button uk-button-primary" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="uk-container">
+            <div class="footer-content uk-flex uk-flex-between">
+                <div class="footer-left">
+                    <p>SHAM AH.</p>
+                </div>
+                <div class="footer-right">
+                    <p>&copy; 2024 Digital Key. All rights reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.6.22/js/uikit.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.6.22/js/uikit-icons.min.js"></script>
+    <script src="assets/js/observer.js"></script>
     <script src="assets/js/typewriter.js"></script>
     <script src="assets/js/slideshow.js"></script>
     <script src="assets/js/gradient.js"></script>
@@ -121,6 +523,8 @@
         gradient.initGradient("#herogradient-canvas");
     </script>
     <script src="assets/js/themetoggler.js"></script>
+    <script src="assets/js/skillset-toggle.js"></script>
+    <script src="assets/js/animatededge.js"></script>
 </body>
 
 </html>
