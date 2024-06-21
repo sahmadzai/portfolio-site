@@ -12,11 +12,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const textSlides = document.querySelectorAll(".text-slide");
   const totalSlides = slides.length;
 
-  function showNextSlide() {
+  window.showNextSlide = function () {
+    console.log("About Section- Showing next slide");
     currentIndex = (currentIndex + 1) % totalSlides;
     document.querySelector(`#slide-${currentIndex + 1}`).checked = true;
     updateTextSlide();
-  }
+  };
 
   function updateTextSlide() {
     textSlides.forEach((slide, index) => {
@@ -32,21 +33,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // let autoSlide = setInterval(showNextSlide, 6000);
+  window.autoSlide = setInterval(window.showNextSlide, 6000);
 
-  // // Pause the slideshow on hover
-  // document
-  //   .querySelector(".about-section")
-  //   .addEventListener("mouseover", function () {
-  //     clearInterval(autoSlide);
-  //   });
+  // Pause the slideshow on hover
+  document
+    .querySelector(".about-section")
+    .addEventListener("mouseover", function () {
+      clearInterval(window.autoSlide);
+    });
 
-  // // Resume the slideshow on mouseout
-  // document
-  //   .querySelector(".about-section")
-  //   .addEventListener("mouseout", function () {
-  //     autoSlide = setInterval(showNextSlide, 6000);
-  //   });
+  // Resume the slideshow on mouseout
+  document
+    .querySelector(".about-section")
+    .addEventListener("mouseout", function () {
+      window.autoSlide = setInterval(window.showNextSlide, 6000);
+    });
 
   // Initialize the text for the first slide
   updateTextSlide();
