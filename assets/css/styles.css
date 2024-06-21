@@ -1,5 +1,7 @@
 body.dark-theme {
   --primary-color: #121212;
+  --primary-color-faded: rgba(18, 18, 18, 0.2);
+  --primary-color-none: rgba(18, 18, 18, 0);
   --secondary-color: #faf9f6;
   --accent-color: #ffc300;
   --quaternary-color: #d9d9d9;
@@ -9,6 +11,8 @@ body.dark-theme {
 
 body.light-theme {
   --primary-color: #faf9f6;
+  --primary-color-faded: rgba(250, 249, 246, 0.2);
+  --primary-color-none: rgba(250, 249, 246, 0);
   --secondary-color: #121212;
   --accent-color: #ffc300;
   --quaternary-color: #d9d9d9;
@@ -26,6 +30,17 @@ body {
   color: var(--secondary-color);
   font-family: "Sen", sans-serif;
   transition: background-color 0.3s, color 0.3s;
+}
+
+::selection {
+  background: #efefef;
+  color: #212121;
+  mix-blend-mode: difference;
+}
+
+::-moz-selection {
+  background: #efefef;
+  color: #212121;
 }
 
 h1,
@@ -145,10 +160,7 @@ body.dark-theme .theme-toggle {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
   padding: 10px 0;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
 }
 
 .navbar .uk-container {
@@ -156,9 +168,14 @@ body.dark-theme .theme-toggle {
 }
 
 .navbar .uk-logo {
-  font-weight: bold;
-  font-size: 1.5rem;
-  color: var(--secondary-color);
+  font-weight: 800;
+  font-size: 48px;
+  color: var(--quaternary-color);
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: url("https://tactusmarketing.com/wp-content/uploads/tactus-waves-hero.mp4");
+  background-size: cover;
+  background-position: center;
 }
 
 .navbar .nav-menu {
@@ -177,8 +194,8 @@ body.dark-theme .theme-toggle {
 }
 
 .navbar .nav-menu i {
-  font-size: 1.5rem;
-  color: var(--secondary-color);
+  font-size: 32px;
+  color: var(--quaternary-color);
   line-height: revert;
 }
 
@@ -188,44 +205,60 @@ body.dark-theme .theme-toggle {
   width: 100%;
   height: 100vh;
   padding-top: 100px;
+  padding-bottom: 10px;
   margin-bottom: 10%;
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
 }
 
-#herogradient-canvas {
-  width: 100%;
-  height: 100vh;
-  min-height: 100%;
+.video-wrap {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -10%;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
-  z-index: 0;
+  z-index: 1;
 }
 
-.hero .content {
+#video-bg {
+  position: absolute;
   width: 100%;
-  height: 80svh;
+  height: 100%;
+  object-fit: cover;
+  transform: rotate(180deg);
+}
+
+.content {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: -5%;
 }
 
-.hero h1 {
-  font-size: 150px;
-  font-weight: bold;
-  margin: 0;
-  color: var(--secondary-color);
-  text-shadow: 4px 4px 15px rgba(255, 215, 0, 0.6);
-  z-index: 1;
+.blend {
+  mix-blend-mode: difference !important;
+  color: var(--accent-color);
+  z-index: 3;
+}
+
+.hero-title {
+  font-size: 10vw;
+  font-weight: 900;
 }
 
 .hero p {
   font-size: 1.5rem;
   margin: 20px 0;
-  z-index: 1;
+  z-index: 2;
 }
 
 .hero .buttons {
@@ -234,12 +267,12 @@ body.dark-theme .theme-toggle {
   justify-content: space-evenly;
   align-items: center;
   margin-top: 20px;
+  z-index: 2;
 }
 
 .hero .buttons a {
   min-width: 150px;
   padding: 5px 20px;
-  color: var(--secondary-color);
   background: var(--button-bg-color);
   border: none;
   border-radius: 10px;
@@ -247,6 +280,7 @@ body.dark-theme .theme-toggle {
   font-weight: bold;
   position: relative;
   overflow: hidden;
+  color: var(--secondary-color);
 }
 
 .hero .buttons a i {
@@ -285,30 +319,6 @@ body.dark-theme .theme-toggle {
 
 .fade-border:hover::before {
   opacity: 1;
-}
-
-/* HERO SECTION DARK THEME STYLES */
-body.dark-theme .hero h1 {
-  color: var(--secondary-color);
-}
-
-body.dark-theme .hero p {
-  color: var(--secondary-color);
-}
-
-/* LIGHT THEME STYLES */
-body.light-theme #herogradient-canvas {
-  --gradient-color-1: #ffb347;
-  --gradient-color-2: #ffcc99;
-  --gradient-color-3: #ffb347;
-  --gradient-color-4: #ffcc99;
-}
-
-body.dark-theme #herogradient-canvas {
-  --gradient-color-1: #001f3f;
-  --gradient-color-2: #0074d9;
-  --gradient-color-3: #001f3f;
-  --gradient-color-4: #0074d9;
 }
 
 /************************* ABOUT SECTION STYLES *************************/

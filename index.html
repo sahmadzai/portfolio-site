@@ -23,9 +23,10 @@
 
     <!-- Navbar -->
     <div class="navbar uk-navbar-container uk-navbar-transparent">
-        <div class="uk-container uk-container-expand uk-flex uk-flex-between">
-            <a class="uk-navbar-item uk-logo" href="#">SHAMS AH.</a>
-            <a class="nav-menu" href="#offcanvas-nav" uk-toggle class="uk-navbar-toggle"><i class="fas fa-bars"></i></a>
+        <div class="nav-content uk-container uk-container-expand uk-flex uk-flex-between">
+            <a class="uk-navbar-item uk-logo blend" href="#">SA</a>
+            <a class="nav-menu blend" href="#offcanvas-nav" uk-toggle class="uk-navbar-toggle"><i
+                    class="fas fa-bars"></i></a>
         </div>
     </div>
 
@@ -43,9 +44,13 @@
 
     <!-- Hero Section -->
     <div class="hero animated-section">
-        <canvas id="herogradient-canvas" data-transition-in="true" data-js-darken-top></canvas>
+        <div class="video-wrap">
+            <video autoplay="" playsinline="" loop="" muted="" id="video-bg">
+                <source src="https://tactusmarketing.com/wp-content/uploads/tactus-waves-hero.mp4" type="video/mp4">
+            </video>
+        </div>
         <div class="content">
-            <h1>WELCOME!</h1>
+            <h1 class="hero-title blend">WELCOME!</h1>
             <p>I'm Shams, a <span class="typewriter"
                     data-text='["full-stack developer", "DIYer", "electronics geek", "entrepreneur", "lifelong learner", "photographer", "videographer", "graphic designer"]'></span>!
             </p>
@@ -58,6 +63,7 @@
             </div>
         </div>
     </div>
+
 
     <!-- About Section -->
     <div class="about-section animated-section" id="about">
@@ -514,14 +520,13 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.6.22/js/uikit.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.6.22/js/uikit-icons.min.js"></script>
-    <script src="assets/js/observer.js"></script>
-    <script src="assets/js/typewriter.js"></script>
-    <script src="assets/js/slideshow.js"></script>
     <script src="assets/js/gradient.js"></script>
     <script>
         var gradient = new Gradient();
-        gradient.initGradient("#herogradient-canvas");
     </script>
+    <script src="assets/js/observer.js"></script>
+    <script src="assets/js/typewriter.js"></script>
+    <script src="assets/js/slideshow.js"></script>
     <script src="assets/js/themetoggler.js"></script>
     <script src="assets/js/skillset-toggle.js"></script>
     <script src="assets/js/animatededge.js"></script>

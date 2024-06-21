@@ -24,17 +24,17 @@ document.addEventListener("DOMContentLoaded", function () {
         scrollPosition / (sectionHeight + windowHeight - buffer)
       );
 
-      console.log("Scroll Top: ", scrollTop);
-      console.log("Section Top: ", sectionTop);
-      console.log("Section Height: ", sectionHeight);
-      console.log("Scrolled Percentage: ", scrolled * 100);
+      //   console.log("Scroll Top: ", scrollTop);
+      //   console.log("Section Top: ", sectionTop);
+      //   console.log("Section Height: ", sectionHeight);
+      //   console.log("Scrolled Percentage: ", scrolled * 100);
 
       const line = document.querySelector("#animated-edge path:nth-of-type(2)");
       if (line) {
         const length = line.getTotalLength();
         line.style.strokeDasharray = length;
         line.style.strokeDashoffset = length - scrolled * length;
-        console.log("Stroke Dashoffset: ", line.style.strokeDashoffset);
+        // console.log("Stroke Dashoffset: ", line.style.strokeDashoffset);
       } else {
         console.error("SVG path not found");
       }

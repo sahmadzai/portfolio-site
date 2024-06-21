@@ -19,7 +19,6 @@ const currentTheme = localStorage.getItem("theme");
 
 if (currentTheme == "dark") {
   document.body.classList.add("dark-theme");
-  gradient.updateGradientColors(); // Update gradient colors
   themeToggleButton.innerHTML =
     '<i class="fas fa-moon shake"></i><span class="toggle-text">Dark</span>';
   themeToggleButton.classList.add("show-text");
@@ -28,7 +27,6 @@ if (currentTheme == "dark") {
   }, 1500);
 } else if (currentTheme == "light") {
   document.body.classList.add("light-theme");
-  gradient.updateGradientColors(); // Update gradient colors
   themeToggleButton.innerHTML =
     '<i class="fas fa-sun spin"></i><span class="toggle-text">Light</span>';
   themeToggleButton.classList.add("show-text");
@@ -37,7 +35,6 @@ if (currentTheme == "dark") {
   }, 1500);
 } else if (prefersDarkScheme.matches) {
   document.body.classList.add("dark-theme");
-  gradient.updateGradientColors(); // Update gradient colors
   themeToggleButton.innerHTML =
     '<i class="fas fa-moon shake"></i><span class="toggle-text">Dark</span>';
   themeToggleButton.classList.add("show-text");
@@ -52,7 +49,6 @@ themeToggleButton.addEventListener("click", function () {
   if (document.body.classList.contains("dark-theme")) {
     document.body.classList.remove("dark-theme");
     document.body.classList.add("light-theme");
-    gradient.updateGradientColors(); // Update gradient colors
     themeToggleButton.innerHTML =
       '<i class="fas fa-sun spin"></i><span class="toggle-text">Light</span>';
     setTimeout(() => {
@@ -62,7 +58,6 @@ themeToggleButton.addEventListener("click", function () {
   } else {
     document.body.classList.remove("light-theme");
     document.body.classList.add("dark-theme");
-    gradient.updateGradientColors(); // Update gradient colors
     themeToggleButton.innerHTML =
       '<i class="fas fa-moon shake"></i><span class="toggle-text">Dark</span>';
     setTimeout(() => {
