@@ -329,7 +329,7 @@ body.dark-theme .theme-toggle {
 }
 
 .bouncing-arrow {
-  margin-top: 20px;
+  margin-top: 50px;
   z-index: 1;
   position: relative;
 }
