@@ -365,16 +365,17 @@ body.dark-theme .theme-toggle {
   padding-bottom: 10%;
 }
 
-.about-section .uk-container {
-  margin: 0 auto;
-}
-
-.about-section .about-title {
+.about-section .section-title {
   color: var(--secondary-color);
   font-size: 46px;
-  font-weight: 600;
-  text-align: left;
-  margin-bottom: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about-section .uk-container {
+  margin: 0 auto;
 }
 
 .slideshow-container {
@@ -411,34 +412,69 @@ input[type="radio"] {
   width: 80%;
   height: 100%;
   border-radius: 25px;
-  object-fit: fill;
+  object-fit: cover;
 }
 
-#slide-1:checked ~ .cards #item-3,
-#slide-2:checked ~ .cards #item-1,
-#slide-3:checked ~ .cards #item-2 {
-  transform: translateX(-40%) scale(0.8);
-  opacity: 0.4;
-  z-index: 0;
+.cards #item-2 img {
+  object-position: -100px;
+}
+
+.cards #item-3 img {
+  object-position: -150px;
+}
+
+.cards #item-4 img.blurred-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(2px);
+  border-radius: 25px;
+  object-fit: cover;
+}
+
+.cards #item-4 img.main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 100%;
+  border-radius: 25px;
+  object-fit: contain;
 }
 
 #slide-1:checked ~ .cards #item-2,
 #slide-2:checked ~ .cards #item-3,
-#slide-3:checked ~ .cards #item-1 {
+#slide-3:checked ~ .cards #item-4,
+#slide-4:checked ~ .cards #item-5,
+#slide-5:checked ~ .cards #item-6,
+#slide-6:checked ~ .cards #item-1 {
   transform: translateX(40%) scale(0.8);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+#slide-1:checked ~ .cards #item-6,
+#slide-2:checked ~ .cards #item-1,
+#slide-3:checked ~ .cards #item-2,
+#slide-4:checked ~ .cards #item-3,
+#slide-5:checked ~ .cards #item-4,
+#slide-6:checked ~ .cards #item-5 {
+  transform: translateX(-40%) scale(0.8);
   opacity: 0.4;
   z-index: 0;
 }
 
 #slide-1:checked ~ .cards #item-1,
 #slide-2:checked ~ .cards #item-2,
-#slide-3:checked ~ .cards #item-3 {
+#slide-3:checked ~ .cards #item-3,
+#slide-4:checked ~ .cards #item-4,
+#slide-5:checked ~ .cards #item-5,
+#slide-6:checked ~ .cards #item-6 {
   transform: translateX(0) scale(1);
   opacity: 1;
   z-index: 1;
-  img {
-    box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
-  }
 }
 
 .active-slide {
@@ -459,10 +495,113 @@ input[type="radio"] {
   display: block !important;
 }
 
+.text-content .text-slide h3 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  margin-bottom: 20px;
+}
+
 .text-content .text-slide p {
   width: 80%;
   font-size: 1.2rem;
   color: var(--secondary-color);
+}
+
+.text-content .text-slide p.fine-text {
+  font-size: 0.8rem;
+  text-align: center;
+  color: var(--quaternary-color);
+}
+
+.text-content .text-slide h2 {
+  max-width: 80%;
+  margin-top: 5%;
+  font-size: 2.25rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--accent-color);
+}
+
+.text-content .text-slide h4 {
+  max-width: 80%;
+  margin-top: 5%;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--accent-color);
+}
+
+.text-content .text-slide a {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.text-content .text-slide a:hover {
+  color: lightblue;
+}
+
+.text-content .text-slide span {
+  color: var(--accent-color);
+}
+
+.text-content .text-slide .bulleted-info {
+  max-width: 80%;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.text-content .text-slide .bulleted-info ul {
+  margin: 0;
+}
+
+.text-content .text-slide blockquote {
+  max-width: 80%;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  margin-top: 20px;
+}
+
+.text-content .text-slide blockquote .person-source {
+  font-style: italic;
+  text-decoration: none;
+  color: var(--quaternary-color);
+}
+
+.text-content .text-slide blockquote .person-source:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.text-content .text-slide blockquote .article-link {
+  font-size: 1.1rem;
+  font-style: normal;
+  color: blue;
+}
+
+.text-content .text-slide blockquote .article-link:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+.text-content .text-slide .action-buttons {
+  max-width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.text-content .text-slide .action-buttons a {
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.text-content .text-slide .action-buttons a:hover {
+  background: var(--accent-color);
+  color: var(--button-bg-color);
 }
 
 /************************* SKILLSET SECTION STYLES *************************/

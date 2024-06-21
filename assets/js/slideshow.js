@@ -24,7 +24,29 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  let autoSlide = setInterval(showNextSlide, 6000);
+  // Listen for radio button changes
+  slides.forEach((slide, index) => {
+    slide.addEventListener("click", function () {
+      currentIndex = index;
+      updateTextSlide();
+    });
+  });
+
+  // let autoSlide = setInterval(showNextSlide, 6000);
+
+  // // Pause the slideshow on hover
+  // document
+  //   .querySelector(".about-section")
+  //   .addEventListener("mouseover", function () {
+  //     clearInterval(autoSlide);
+  //   });
+
+  // // Resume the slideshow on mouseout
+  // document
+  //   .querySelector(".about-section")
+  //   .addEventListener("mouseout", function () {
+  //     autoSlide = setInterval(showNextSlide, 6000);
+  //   });
 
   // Initialize the text for the first slide
   updateTextSlide();
