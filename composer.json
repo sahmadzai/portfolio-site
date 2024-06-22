@@ -1,0 +1,12 @@
+{
+    "name": "sahmadzai/portfolio-site",
+    "authors": [
+        {
+            "name": "Shamsullah Ahmadzai",
+            "email": "sahmadzai@wm.edu"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+}

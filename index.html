@@ -13,6 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap" rel="stylesheet">
     <!-- Anime.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <!-- Lottie Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.8/lottie.min.js"></script>
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
     <!-- Preloader JS -->
@@ -668,7 +670,7 @@
     <div class="contact-section" id="contact">
         <div class="uk-container">
             <h2 class="contact-title">Get in Touch</h2>
-            <form action="contact.php" method="post" class="contact-form">
+            <form method="post" class="contact-form">
                 <div class="uk-margin">
                     <label for="name" class="uk-form-label">Name</label>
                     <input class="uk-input" type="text" id="name" name="name" placeholder="John Doe" required>
@@ -684,11 +686,15 @@
                         placeholder="Let loose your questions and inquiries!" required></textarea>
                 </div>
                 <div class="uk-margin uk-flex">
-                    <button class="uk-button uk-button-primary" type="submit">Submit</button>
+                    <button id="submit-button" class="uk-button uk-button-primary" type="submit">Submit</button>
                 </div>
             </form>
+            <div id="form-message" style="display: none;">
+                <p id="form-message-text"></p>
+            </div>
         </div>
     </div>
+
 
 
     <!-- Footer -->
@@ -727,6 +733,7 @@
     <script src="assets/js/themetoggler.js"></script>
     <script src="assets/js/skillset-toggle.js"></script>
     <script src="assets/js/animatededge.js"></script>
+    <script src="assets/js/contactform.js"></script>
 </body>
 
 </html>

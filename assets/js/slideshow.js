@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const totalSlides = slides.length;
 
   window.showNextSlide = function () {
-    console.log("About Section- Showing next slide");
+    // console.log("About Section - Showing next slide");
     currentIndex = (currentIndex + 1) % totalSlides;
     document.querySelector(`#slide-${currentIndex + 1}`).checked = true;
     updateTextSlide();
