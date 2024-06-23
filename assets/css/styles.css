@@ -299,6 +299,10 @@ body.dark-theme .theme-toggle {
   font-weight: 900;
 }
 
+.hero-title.broken {
+  display: none;
+}
+
 .hero p {
   font-size: 1.8rem;
   font-weight: 600;
@@ -373,7 +377,9 @@ body.dark-theme .theme-toggle {
 }
 
 .bouncing-arrow {
-  margin-top: 50px;
+  width: 100vw;
+  height: 35px;
+  margin-top: 30px;
   z-index: 1;
   position: relative;
 }
@@ -1159,6 +1165,14 @@ input[type="radio"] {
   color: var(--accent-color);
 }
 
+.footer-right p a {
+  color: var(--accent-color);
+}
+
+.footer-right p a:hover {
+  color: var(--quaternary-color);
+}
+
 /************************* MEDIA QUERIES *************************/
 @media screen and (max-width: 1024px) {
   .hero-title {
@@ -1321,6 +1335,10 @@ input[type="radio"] {
     font-size: 0.9rem;
   }
 
+  .skillset-section .skillset-title {
+    font-size: 36px;
+  }
+
   .skillset-section .skillset-content .carousel {
     padding: 0 20px;
   }
@@ -1340,6 +1358,10 @@ input[type="radio"] {
 
   .skillset-section .skillset-content .list-view .list .list-items {
     min-width: 150px;
+  }
+
+  .currentproject-section .currentproject-title {
+    font-size: 36px;
   }
 
   .currentproject-content .currentproject-card {
@@ -1379,12 +1401,21 @@ input[type="radio"] {
     padding: 5px 10px;
   }
 
+  .experience-section .experience-title {
+    font-size: 36px;
+  }
+
   .experience-section .experience-content #animated-edge {
     height: 1130px;
   }
 
+  .contact-section .contact-title {
+    font-size: 36px;
+  }
+
   .footer .gradient-blend {
     opacity: 0.5;
+    height: 40%;
   }
 
   .footer .footer-content h2 {
@@ -1393,5 +1424,381 @@ input[type="radio"] {
 
   .footer .footer-content p {
     font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .uk-offcanvas-bar {
+    background-color: var(--primary-color);
+    width: 100%;
+  }
+
+  .hero .content {
+    margin-top: -30%;
+  }
+
+  .hero-title {
+    display: none;
+  }
+
+  .hero-title.broken {
+    display: block;
+    max-width: 90vw;
+    font-size: 30vw;
+    font-weight: 900;
+    line-height: 115px;
+    text-align: center;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero .buttons {
+    width: 100vw;
+  }
+
+  .hero .buttons a {
+    min-width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .hero .buttons a i {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .hero .buttons a span {
+    display: none;
+  }
+
+  .about-section {
+    padding-bottom: 25%;
+  }
+
+  .about-section .slideshow-container {
+    height: 400px;
+    margin-bottom: 5%;
+  }
+
+  .about-section .slideshow-container .card {
+    width: 80%;
+  }
+
+  .about-section .text-content {
+    text-align: left;
+  }
+
+  .about-section .text-content .text-slide h2 {
+    font-size: 1.1rem;
+    margin: 15px auto 0 auto;
+    text-align: center;
+  }
+
+  .about-section .text-content .text-slide h3 {
+    font-size: 1.5rem;
+    margin: 0 auto 15px auto;
+    text-align: center;
+  }
+
+  .about-section .text-content .text-slide h4 {
+    margin: 15px auto 0 auto;
+  }
+
+  .about-section .text-content .text-slide p {
+    max-width: 100%;
+    font-size: 0.9rem;
+    margin: 0 auto;
+  }
+
+  .about-section .text-content .text-slide .fine-text {
+    font-size: 0.7rem;
+  }
+
+  .about-section .text-content .text-slide .bulleted-info {
+    max-width: 90%;
+    margin: 15px auto 0 auto;
+  }
+
+  .about-section .text-content .text-slide .bulleted-info ul {
+    margin: 0;
+  }
+
+  .about-section .text-content .text-slide .bulleted-info ul li {
+    text-align: left;
+    font-size: 0.8rem;
+  }
+
+  .about-section .text-content .text-slide .action-buttons {
+    margin: 20px auto 0 auto;
+  }
+
+  .about-section .text-content .text-slide blockquote {
+    margin: 15px auto 0 auto;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .about-section .text-content .text-slide blockquote .person-source {
+    font-size: 0.8rem;
+  }
+
+  .skillset-section {
+    padding-bottom: 25%;
+  }
+
+  .skillset-section .view-toggle {
+    width: 80%;
+    margin-bottom: 10%;
+  }
+
+  .skillset-section .view-toggle .view-btn {
+    min-width: 50%;
+    padding: 15px 0;
+    text-align: center;
+  }
+
+  .skillset-section .skillset-content .carousel {
+    padding: 0 20px;
+  }
+
+  .skillset-section .skillset-content .carousel .carousel-title {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  .skillset-section .skillset-content .carousel ul li {
+    max-width: 35%;
+  }
+
+  .skillset-section
+    .skillset-content
+    .text-content
+    .text-slide
+    .vertical-divider {
+    display: none;
+  }
+
+  .skillset-section .skillset-content .list-view {
+    flex-direction: column;
+    align-items: center;
+    margin-right: 0;
+  }
+
+  .skillset-section .skillset-content .list-view .langandframe,
+  .skillset-section .skillset-content .list-view .softandapp {
+    width: 95%;
+  }
+
+  .skillset-section .skillset-content .list-view .list {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .skillset-section .skillset-content .list-view .list .list-items {
+    margin-right: 10px;
+  }
+
+  .currentproject-section {
+    padding-bottom: 25%;
+  }
+
+  .currentproject-section .currentproject-content .currentproject-card {
+    padding-top: 10%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .currentproject-section
+    .currentproject-content
+    .currentproject-card
+    .currentproject-image {
+    width: 80%;
+    margin-bottom: 5%;
+  }
+
+  .currentproject-section
+    .currentproject-content
+    .currentproject-card
+    .currentproject-image
+    img {
+    width: 100%;
+  }
+
+  .currentproject-section
+    .currentproject-content
+    .currentproject-card
+    .currentproject-info {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .experience-section {
+    padding-bottom: 25%;
+  }
+
+  .experience-section .experience-content .circle {
+    transform: translate(25%, -50%);
+  }
+
+  .experience-section .experience-content #animated-edge {
+    width: 40px;
+    height: 1450px;
+  }
+
+  .experience-section .experiences {
+    padding-left: 20px;
+  }
+
+  .experience-section .experiences .experience-item h3 {
+    font-size: 1.5rem;
+  }
+
+  .experience-section .experiences .experience-item h4 {
+    font-size: 1rem;
+  }
+
+  .experience-section .experiences .experience-item ul li {
+    font-size: 0.9rem;
+  }
+
+  .contact-section {
+    padding-bottom: 25%;
+  }
+
+  .contact-section .contact-form {
+    max-width: 90%;
+  }
+
+  .footer .gradient-blend {
+    display: none;
+  }
+
+  .footer .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer .footer-content h2 {
+    font-size: 36px;
+    margin-bottom: 5%;
+  }
+
+  .footer .footer-content p {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .hero p {
+    font-size: 0.8rem;
+  }
+
+  .about-section .section-title {
+    font-size: 36px;
+  }
+
+  .about-section .slideshow-container {
+    height: 400px;
+    margin-bottom: 5%;
+  }
+
+  .about-section .slideshow-container .card {
+    width: 80%;
+  }
+
+  .about-section .text-content {
+    text-align: left;
+  }
+
+  .about-section .text-content .text-slide h2 {
+    font-size: 1.1rem;
+    margin: 15px auto 0 auto;
+    text-align: center;
+  }
+
+  .about-section .text-content .text-slide h3 {
+    font-size: 1.5rem;
+    margin: 0 auto 15px auto;
+    text-align: center;
+  }
+
+  .about-section .text-content .text-slide h4 {
+    margin: 15px auto 0 auto;
+  }
+
+  .about-section .text-content .text-slide p {
+    max-width: 100%;
+    font-size: 0.9rem;
+    margin: 0 auto;
+  }
+
+  .about-section .text-content .text-slide .fine-text {
+    font-size: 0.7rem;
+  }
+
+  .about-section .text-content .text-slide .bulleted-info {
+    max-width: 90%;
+    margin: 15px auto 0 auto;
+  }
+
+  .about-section .text-content .text-slide .bulleted-info ul {
+    margin: 0;
+  }
+
+  .about-section .text-content .text-slide .bulleted-info ul li {
+    text-align: left;
+    font-size: 0.8rem;
+  }
+
+  .about-section .text-content .text-slide .action-buttons {
+    margin: 20px auto 0 auto;
+  }
+
+  .about-section .text-content .text-slide blockquote {
+    margin: 15px auto 0 auto;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .about-section .text-content .text-slide blockquote .person-source {
+    font-size: 0.8rem;
+  }
+
+  .skillset-section .skillset-title {
+    font-size: 36px;
+  }
+
+  .skillset-section .view-toggle {
+    width: 80%;
+    margin-bottom: 10%;
+  }
+
+  .skillset-section .view-toggle .view-btn {
+    min-width: 50%;
+    padding: 15px 0;
+    text-align: center;
+  }
+
+  .skillset-section .skillset-content .list-view .list-title {
+    font-size: 1.25rem;
+    margin-bottom: 0;
+  }
+
+  .skillset-section .skillset-content .list-view .list .list-items {
+    min-width: 110px;
+  }
+
+  .skillset-section .skillset-content .list-view .list .list-items li {
+    font-size: 0.8rem;
+  }
+
+  .currentproject-section .currentproject-title {
+    font-size: 36px;
   }
 }
