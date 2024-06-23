@@ -1242,3 +1242,156 @@ input[type="radio"] {
     font-size: 1rem;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .hero-title {
+    font-size: 15vw;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .hero .buttons {
+    width: 80vw;
+  }
+
+  .about-section .section-title {
+    font-size: 36px;
+  }
+
+  .about-section .slideshow-container {
+    height: 500px;
+  }
+
+  .about-section .text-content {
+    margin-top: 5%;
+    text-align: center;
+  }
+
+  .about-section .text-content .text-slide h2 {
+    font-size: 1.25rem;
+    margin: 15px auto 0 auto;
+  }
+
+  .about-section .text-content .text-slide h3 {
+    font-size: 1.75rem;
+    margin: 0 auto 15px auto;
+  }
+
+  .about-section .text-content .text-slide h4 {
+    margin: 15px auto 0 auto;
+  }
+
+  .about-section .text-content .text-slide p {
+    max-width: 100%;
+    font-size: 1rem;
+    margin: 0 auto;
+  }
+
+  .about-section .text-content .text-slide .fine-text {
+    font-size: 0.8rem;
+  }
+
+  .about-section .text-content .text-slide .bulleted-info {
+    max-width: 90%;
+    margin: 15px auto 0 auto;
+  }
+
+  .about-section .text-content .text-slide .bulleted-info ul {
+    margin: 0;
+  }
+
+  .about-section .text-content .text-slide .bulleted-info ul li {
+    text-align: left;
+    font-size: 0.9rem;
+  }
+
+  .about-section .text-content .text-slide .action-buttons {
+    margin: 20px auto 0 auto;
+  }
+
+  .about-section .text-content .text-slide blockquote {
+    margin: 15px auto 0 auto;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .about-section .text-content .text-slide blockquote .person-source {
+    font-size: 0.9rem;
+  }
+
+  .skillset-section .skillset-content .carousel {
+    padding: 0 20px;
+  }
+
+  .skillset-section .skillset-content .carousel ul li {
+    max-width: 25%;
+  }
+
+  .skillset-section .skillset-content .carousel ul li img {
+    width: 60px;
+  }
+
+  .skillset-section .skillset-content .list-view .list-title {
+    font-size: 1.25rem;
+    margin-bottom: 0;
+  }
+
+  .skillset-section .skillset-content .list-view .list .list-items {
+    min-width: 150px;
+  }
+
+  .currentproject-content .currentproject-card {
+    min-height: 450px;
+  }
+
+  .currentproject-section
+    .currentproject-content
+    .currentproject-card
+    .currentproject-info
+    h3 {
+    font-size: 25px;
+  }
+
+  .currentproject-section
+    .currentproject-content
+    .currentproject-card
+    .currentproject-info
+    p {
+    font-size: 0.9rem;
+  }
+
+  .currentproject-section
+    .currentproject-content
+    .currentproject-card
+    .currentproject-info
+    ul
+    li {
+    font-size: 0.8rem;
+  }
+
+  .currentproject-content
+    .currentproject-card
+    .currentproject-image
+    .currentproject-actions
+    a {
+    padding: 5px 10px;
+  }
+
+  .experience-section .experience-content #animated-edge {
+    height: 1130px;
+  }
+
+  .footer .gradient-blend {
+    opacity: 0.5;
+  }
+
+  .footer .footer-content h2 {
+    font-size: 36px;
+  }
+
+  .footer .footer-content p {
+    font-size: 0.9rem;
+  }
+}
