@@ -453,7 +453,7 @@ input[type="radio"] {
 }
 
 .cards .card img {
-  width: 80%;
+  width: 100%;
   height: 100%;
   border-radius: 25px;
   object-fit: cover;
@@ -482,7 +482,7 @@ input[type="radio"] {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80%;
+  width: 85%;
   height: 100%;
   border-radius: 25px;
   object-fit: contain;
@@ -1157,4 +1157,88 @@ input[type="radio"] {
   margin: 0;
   font-size: 1.2rem;
   color: var(--accent-color);
+}
+
+/************************* MEDIA QUERIES *************************/
+@media screen and (max-width: 1024px) {
+  .hero-title {
+    font-size: 13vw;
+  }
+
+  .hero p {
+    font-size: 1.5rem;
+  }
+
+  .hero .buttons {
+    width: 60vw;
+  }
+
+  .about-section .section-title {
+    margin-bottom: 5%;
+  }
+
+  .about-section .uk-grid > * {
+    padding: 0;
+  }
+
+  .about-section .slideshow-container {
+    height: 400px;
+  }
+
+  .about-section .text-content .text-slide h3 {
+    font-size: 2rem;
+  }
+  .about-section .text-content .text-slide h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-section .text-content .text-slide p {
+    max-width: 100%;
+    font-size: 1rem;
+  }
+
+  .about-section .text-content .text-slide blockquote {
+    font-size: 1.25rem;
+  }
+
+  .about-section .text-content .text-slide blockquote .person-source {
+    font-size: 1rem;
+  }
+
+  .currentproject-section
+    .currentproject-content
+    .currentproject-card
+    .currentproject-info
+    h3 {
+    font-size: 30px;
+  }
+
+  .currentproject-section
+    .currentproject-content
+    .currentproject-card
+    .currentproject-info
+    p {
+    font-size: 1rem;
+  }
+
+  .currentproject-section
+    .currentproject-content
+    .currentproject-card
+    .currentproject-info
+    ul
+    li {
+    font-size: 0.9rem;
+  }
+
+  .experience-section .experience-content #animated-edge {
+    height: 1030px;
+  }
+
+  .footer .footer-content h2 {
+    font-size: 40px;
+  }
+
+  .footer .footer-content p {
+    font-size: 1rem;
+  }
 }

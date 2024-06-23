@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document
     .querySelector(".about-section")
     .addEventListener("mouseover", function () {
+      console.log("Clearing interval, mouse detected.");
       clearInterval(window.autoSlide);
     });
 
@@ -46,6 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document
     .querySelector(".about-section")
     .addEventListener("mouseout", function () {
+      console.log("Resuming interval, mouse out.");
       window.autoSlide = setInterval(window.showNextSlide, 6000);
     });
 
