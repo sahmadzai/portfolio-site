@@ -1146,16 +1146,21 @@ input[type="radio"] {
   align-items: center;
 }
 
-.footer-left h2,
+.footer-left a,
 .footer-right p {
   mix-blend-mode: difference;
   color: #ffffff;
   font-weight: 700;
 }
 
-.footer-left h2 {
+.footer-left a {
   font-size: 46px;
   color: var(--accent-color);
+}
+
+.footer-left a:hover {
+  color: var(--quaternary-color);
+  cursor: pointer;
 }
 
 .footer-right p {
@@ -1248,7 +1253,7 @@ input[type="radio"] {
     height: 1030px;
   }
 
-  .footer .footer-content h2 {
+  .footer .footer-content a {
     font-size: 40px;
   }
 
@@ -1418,7 +1423,7 @@ input[type="radio"] {
     height: 40%;
   }
 
-  .footer .footer-content h2 {
+  .footer .footer-content a {
     font-size: 36px;
   }
 
@@ -1683,7 +1688,7 @@ input[type="radio"] {
     align-items: center;
   }
 
-  .footer .footer-content h2 {
+  .footer .footer-content a {
     font-size: 36px;
     margin-bottom: 5%;
   }
