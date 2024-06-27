@@ -7,5 +7,8 @@
 # Ignore all php files within the assets/php directory
 php/*
 
+# Ignore vendor directory
+vendor/*
 
-/vendor/
+# Ignore the demo directory for now
+demos/*
