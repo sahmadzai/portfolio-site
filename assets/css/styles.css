@@ -243,6 +243,103 @@ body.dark-theme .theme-toggle {
   line-height: revert;
 }
 
+/************************* SIDEBAR MENU STYLES *************************/
+.uk-offcanvas-bar {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 0;
+}
+
+.uk-offcanvas-overlay::before {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.uk-offcanvas-bar .uk-offcanvas-close {
+  color: var(--secondary-color);
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.uk-offcanvas-bar .uk-offcanvas-close:hover {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  border-radius: 10px;
+  animation: spin 0.8s ease-in-out;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+.uk-offcanvas-bar .uk-offcanvas-close svg {
+  width: 20px;
+  height: 20px;
+}
+
+.uk-offcanvas-bar .uk-nav {
+  padding: 60px 0 20px 0;
+}
+
+.uk-offcanvas-bar .uk-nav li {
+  margin: 0;
+}
+
+.uk-offcanvas-bar .uk-nav li a {
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 20px 10%;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.uk-offcanvas-bar .uk-nav li a:hover {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+}
+
+.uk-offcanvas-bar .uk-nav li a.active {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+}
+
+.uk-offcanvas-bar .social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.uk-offcanvas-bar .social-links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px;
+  padding: 10px 15px;
+  background: var(--button-bg-color);
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.uk-offcanvas-bar .social-links a:hover {
+  background: var(--accent-color);
+  text-decoration: none;
+}
+
+.uk-offcanvas-bar .social-links a i {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.uk-offcanvas-bar .social-links a:hover i {
+  color: var(--primary-color);
+}
+
 /************************* HERO SECTION STYLES *************************/
 
 .hero {
