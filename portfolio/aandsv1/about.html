@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <!---PAGE VALUES AND DESCRIPTIONS-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A&S Web Development Services">
+    <meta name="keywords" content="HTML,CSS,JavaScript,Web Development Services, Web Design, Web Dev, Developers">
+    <meta name="author" content="Shamsullah Ah.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--ATTACH CSS AND JAVASCRIPT FILES-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link rel="script" href="js/script.js">
+
+    <!-- ATTACH FONTS-->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Teko&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <title>A & S | About Us</title>
+
+    <style>
+        /* Sticky Banner */
+        .sticky-banner {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #ffcc00;
+            color: #000;
+            text-align: center;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+
+        .sticky-banner p {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .sticky-banner a {
+            color: #000;
+            text-decoration: underline;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="sticky-banner">
+        <p>This is a DEMO! &copy; Copyright <a href="https://sahmadzai.com">sahmadzai.com</a></p>
+    </div>
+    <!-----TOP PART OF PAGE INCLUDING THE NAV BAR----->
+
+    <div class="abtus-hero">
+        <div class="nav w-nav">
+
+            <a class="logo" href="home.html">A & S</a>
+
+            <nav class="known_nav">
+                <ul class="nav_bar_links">
+                    <li><a href="home.html" class="underline">Our Portfolio</a></li>
+                    <li><a href="about.html" id="active">About Us</a></li>
+                    <li><a href="contact.html" class="underline ">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="abtus-main-wrapper  w-container">
+            <h1 class="main-header"></h1>
+        </div>
+
+    </div>
+
+    <div class="section descriptions">
+
+        <div class="abtus w-container">
+            <div class="border"></div>
+
+            <img src="img/shams_pfp.jpg" alt="Sham's Picture" class="abts sham profile-pic">
+            <img src="img/abdl_pfp.jpg" alt="Abdul's Picture" class="abts abdul profile-pic">
+
+            <div class="abtus desc-who">
+                <p class="abtus desc-text" id="abtus-who">
+                    Our company is one that has a goal to better serve all businesses in our local community with hopes
+                    of expanding further than just locally. We offer full web design, development, and deployment as
+                    well as a range of other services. We are the one-stop-shop
+                    that offers a full range of solutions for any of your online endeavors. Need a logo redesign, maybe
+                    a site, or even maintenance and support on a current site that you may have. We are here for all
+                    your online needs and anything else
+                    that you may need that fits within our expertise. If you’re reading this, we hope to be working with
+                    you soon on your next project! :)
+
+                    <span id="more">
+                        <br>A&S stands for Abdul and Sham, two teenagers willing to give up their teenage years for
+                        their future. Instead of partying, hanging out with friends, going to concerts we decided to
+                        work now and as a reward for our hard work we
+                        could enjoy all these things later on in our life. We both became best friends in middle school
+                        and since then we have experimented with a ton of ideas and have a large number of skills under
+                        our belt, but nothing was more influential
+                        than starting A&S and working with our first client. This first project or client of ours
+                        motivated us to serve the businesses in our community to help them expand their online presence
+                        and to give them the ability to better serve
+                        their new and or existing customers. Many small business owners are not informed about the
+                        benefits of having a website for their business but we’re here to fill that gap and help you get
+                        started.
+                    </span>
+                    <br>
+
+                    <button id="readmore" onclick="read()">Read more</button>
+                    <script>
+                        var i = 0;
+
+                        function read() {
+                            if (!i) {
+                                document.getElementById("more").style.
+                                    display = "inline";
+                                document.getElementById("readmore").innerHTML = "Read less";
+
+                                i = 1;
+                            } else {
+                                document.getElementById("more").style.
+                                    display = "none";
+                                document.getElementById("readmore").innerHTML = "Read more";
+
+                                i = 0;
+                            }
+                        }
+                    </script>
+                </p>
+            </div>
+
+
+            <div class="abtus-cntct-box ">
+                <div class="cntctbox contenttable">
+                    <div class="three_fourth ">
+                        <h2 class="top10 "><span class="name "> Interested? </span> Want to find out more?</h2>
+                    </div>
+                    <div class="one_fourth lastcolumn ">
+                        <a class="btn btn-primary btnposright top10 " href="contact.html">Get in touch »</a>
+                    </div>
+                    <div class="spacer"></div>
+                    <div style="height: 6px; float: left; width: 100%; "></div>
+                    <p>Questions, concerns, or even wanting to start a new project with us, contact us today to grow
+                        your online potential!</p>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+    <hr>
+    <!-----PAGE FOOTER----->
+    <div class="footer ">
+        <div class="w-cotainer ">
+            <div class="footer-text ">© 2018 A & S Web Development </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

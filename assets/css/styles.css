@@ -212,14 +212,26 @@ body.dark-theme .theme-toggle {
 }
 
 .navbar .uk-logo {
-  font-weight: 800;
-  font-size: 48px;
-  color: var(--quaternary-color);
-  -webkit-background-clip: text;
-  background-clip: text;
-  background-image: url("https://tactusmarketing.com/wp-content/uploads/tactus-waves-hero.mp4");
-  background-size: cover;
-  background-position: center;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+}
+
+.navbar .uk-logo .logo-img {
+  width: 60px;
+  height: 60px;
+  fill: var(--quaternary-color);
+  mix-blend-mode: difference;
+  animation: blend-effect 5s infinite alternate;
+}
+
+@keyframes blend-effect {
+  0% {
+    fill: var(--accent-color);
+  }
+  100% {
+    fill: var(--quaternary-color);
+  }
 }
 
 .navbar .nav-menu {
@@ -1243,6 +1255,25 @@ input[type="radio"] {
   align-items: center;
 }
 
+.footer-left {
+  display: flex;
+  align-items: center;
+}
+
+.footer-left .footer-logo {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.footer-left .footer-logo .logo-img {
+  width: 70px;
+  height: 100%;
+  fill: var(--quaternary-color); /* Initial color */
+  mix-blend-mode: difference;
+  animation: blend-effect 5s infinite alternate;
+}
+
 .footer-left a,
 .footer-right p {
   mix-blend-mode: difference;
@@ -1250,12 +1281,12 @@ input[type="radio"] {
   font-weight: 700;
 }
 
-.footer-left a {
+.footer-left .footer-title {
   font-size: 46px;
   color: var(--accent-color);
 }
 
-.footer-left a:hover {
+.footer-left .footer-title:hover {
   color: var(--quaternary-color);
   cursor: pointer;
 }
@@ -1273,6 +1304,15 @@ input[type="radio"] {
 
 .footer-right p a:hover {
   color: var(--quaternary-color);
+}
+
+@keyframes blend-effect {
+  0% {
+    fill: var(--accent-color); /* Starting color */
+  }
+  100% {
+    fill: var(--quaternary-color); /* Ending color */
+  }
 }
 
 /************************* MEDIA QUERIES *************************/

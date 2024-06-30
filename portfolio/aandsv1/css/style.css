@@ -1,0 +1,929 @@
+/* RULES */
+
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("../fonts/BebasNeue-Regular.otf");
+}
+
+/* END RULES */
+
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Teko", sans-serif;
+  background-color: #222222;
+}
+
+canvas {
+  display: block;
+}
+
+/****************************** WELCOME PAGE ******************************/
+
+/* WELCOME PAGE TEXT STYLING */
+
+.welcome {
+  width: 100%;
+  min-height: 100%;
+  position: absolute;
+}
+
+.welcome_text {
+  font-family: "Montserrat", sans-serif;
+}
+
+.welcome_description {
+  font-weight: lighter;
+  font-size: 20px;
+}
+
+.welcome_name {
+  color: #ff0000;
+  opacity: 0.8;
+  font-weight: bolder;
+}
+
+.welcome h2 {
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  margin-top: 20%;
+}
+
+/* WELCOME PAGE BUTTON STYLING AND ANIMATION */
+
+.welcome_button {
+  -webkit-transition: 1s all ease;
+  transition: 1s all ease;
+  margin: 25px auto;
+  padding: 10px 20px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2px solid white;
+  color: white;
+  background: none;
+  font-family: "Fjalla One", sans-serif;
+  font-size: 15px;
+  letter-spacing: 2px;
+  z-index: 1;
+}
+
+.welcome_button:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: black;
+}
+
+/* WELCOME PAGE BACKGROUND ANIMATION */
+
+.animation-area {
+  background: #333333;
+  width: 100%;
+  height: 100vh;
+}
+
+.box-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.box-area li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 25px;
+  height: 25px;
+  background: rgba(255, 255, 255, 0.2);
+  /*linear-gradient(to left, rgba(185, 19, 114, 0.5), rgba(107, 15, 26, 0.5))*/
+  animation: animatebox 20s linear infinite;
+  bottom: -100px;
+}
+
+.box-area li:nth-child(1) {
+  left: 86%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+.box-area li:nth-child(2) {
+  left: 12%;
+  width: 30px;
+  height: 30px;
+  animation-delay: 1s;
+  animation-duration: 10s;
+}
+
+.box-area li:nth-child(3) {
+  left: 70%;
+  width: 100px;
+  height: 100px;
+  animation-delay: 1.5s;
+}
+
+.box-area li:nth-child(4) {
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 15s;
+}
+
+.box-area li:nth-child(5) {
+  left: 65%;
+  width: 40px;
+  height: 40px;
+  animation-delay: 0s;
+}
+
+.box-area li:nth-child(6) {
+  left: 15%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 2s;
+}
+
+@keyframes animatebox {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-800px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/****************************** PORTFOLIO PAGE ******************************/
+
+/* Top section of the page, including the navigation bar */
+
+.hero {
+  padding-top: 50px;
+  min-height: 420px;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.57), #222222),
+    url(../img/ptfo-hero-back.jpg);
+  background-position: 0px 0px, 38% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.heading-wrapper {
+  margin-top: 140px;
+  padding-right: 15%;
+  padding-left: 15%;
+  text-align: center;
+}
+
+.heading-wrapper.w-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 720px;
+  min-height: 450px;
+}
+
+.main-header {
+  font-family: "Lora", serif;
+  font-weight: 400;
+  font-size: 48px;
+  margin-bottom: 37px;
+  color: white;
+}
+
+.button.w-button {
+  border: 2px solid #00d6b4;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+a.w-button {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #00d6b4;
+  letter-spacing: 2px;
+}
+
+.button:hover {
+  border-color: white;
+  color: white;
+  transition: ease 0.3s;
+}
+
+/* ALL NAVIGATION BAR STYLING AND ANIMATION */
+
+.nav.w-nav li a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+}
+
+.nav.w-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px 10%;
+}
+
+.nav {
+  padding-top: 45px;
+  background-color: transparent;
+}
+
+.w-nav {
+  position: relative;
+  background: transparent;
+  z-index: 1000;
+}
+
+/* Animation for the underline and "light up" on nav items after hovering mouse over */
+
+.underline::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s;
+}
+
+.underline:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+
+.nav_bar_links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav_bar_links li a:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+/* Upper left logo styling */
+
+.logo {
+  cursor: pointer;
+  margin-right: auto;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Bebas Neue", serif;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+/* Static underline under the active page */
+
+.nav_bar_links a#active {
+  border-bottom: 2px solid white;
+}
+
+.nav_bar_links {
+  list-style: none;
+}
+
+.nav_bar_links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+/* Portfolio section styling and animations */
+
+.section {
+  padding: 10px 0;
+  margin-bottom: 25px;
+}
+
+.w-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1080px;
+}
+
+.section-title {
+  margin-top: 0px;
+  margin-bottom: 32px;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 26px;
+  text-align: center;
+}
+
+.w-container .w-row {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+div.w-dyn-items.w-row {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.ptfo-image {
+  width: 350px;
+  margin-bottom: 22px;
+  border-radius: 3px;
+  -webkit-transition: opacity 200ms ease;
+  transition: opacity 200ms ease;
+}
+
+.ptfo-image:hover {
+  opacity: 0.6;
+}
+
+/* What we do, description, styling */
+
+.services-section {
+  padding: 100px 0;
+}
+
+.inner-width {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  overflow: hidden;
+}
+
+.section-title {
+  text-align: center;
+  color: #ddd;
+  font-size: 30px;
+}
+
+.border {
+  width: 160px;
+  height: 2px;
+  background: #00d6b4;
+  margin: 80px auto;
+  margin-bottom: 60px;
+  box-shadow: 0px 0px 30px 5px #00d6b4;
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.service-box {
+  max-width: 33.33%;
+  padding: 10px;
+  text-align: center;
+  color: #ddd;
+  cursor: pointer;
+}
+
+.service-icon {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  border: 3px solid #00d6b4;
+  color: #00d6b4;
+  transform: rotate(45deg);
+  margin-bottom: 30px;
+  margin-top: 16px;
+  transition: 0.3s linear;
+  overflow: hidden;
+}
+
+.service-icon i {
+  line-height: 70px;
+  transform: rotate(-45deg);
+  font-size: 26px;
+  transition: transform 0.5 ease-out;
+}
+
+.service-box:hover .service-icon {
+  transform: rotate(-45deg);
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.service-title {
+  font-size: 25px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.service-desc {
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  line-height: 25px;
+}
+
+/* Portfolio page footer styling */
+
+.footer {
+  margin-top: 19px;
+  padding-top: 26px;
+  padding-bottom: 36px;
+  background-color: #222222;
+  color: #999999;
+  font-family: sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+  display: block;
+}
+
+.footer-text {
+  margin-bottom: 10px;
+  font-family: sans-serif;
+  line-height: 22px;
+  text-align: center;
+}
+
+hr {
+  margin: 0 auto;
+  width: 1620px;
+}
+
+/****************************** ABOUT US PAGE ******************************/
+
+.abtus-hero {
+  padding-top: 50px;
+  min-height: 420px;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.47), #222222),
+    url(../img/abtus-hero-back.jpg);
+  background-position: 0px 0px, 38% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.abtus-main-wrapper {
+  margin-top: 140px;
+  padding-right: 15%;
+  padding-left: 15%;
+  text-align: center;
+}
+
+.abtus-main-wrapper.w-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 720px;
+  min-height: 350px;
+}
+
+.abtus-main-wrapper .main-header {
+  font-family: "Montserrat", sans-serif;
+  font-size: 58px;
+  font-weight: bolder;
+  margin-bottom: 37px;
+  color: white;
+}
+
+.abtus-main-wrapper .main-header::before {
+  content: "";
+  animation: animate infinite 10s ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+}
+
+@keyframes animate {
+  0% {
+    content: "About Us";
+  }
+  50% {
+    content: "Who?";
+  }
+  100% {
+    content: "What?";
+  }
+}
+
+/* Who we are, profile picture, and description styling */
+
+.abtus.w-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  text-align: center;
+}
+
+.abts.profile-pic {
+  display: inline-block;
+  width: 140px;
+  margin: 31px auto;
+  padding-right: 20px;
+  border-radius: 100%;
+}
+
+.abtus.desc-who {
+  height: auto;
+  margin: 0 auto;
+}
+
+#more {
+  display: none;
+}
+
+button#readmore {
+  background: none;
+  color: white;
+  border: none;
+  text-decoration: underline;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Styling for all the p elements in div.sections.descriptions */
+
+.desc-text {
+  line-height: 30px;
+  text-align: justify;
+  text-indent: 50px;
+  font-family: "Lora", serif;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+span#more {
+  text-indent: 50px;
+}
+
+/* Get in touch with us container styling. */
+
+.abtus-cntct-box {
+  padding-top: 50px;
+}
+
+.contenttable {
+  margin-bottom: 16px;
+}
+
+.cntctbox {
+  font-size: 15px;
+}
+
+.cntctbox {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 5px;
+  border: 0;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.contenttable {
+  max-width: 1170px;
+  height: fit-content;
+  font-size: 13px;
+  border-radius: 5px;
+  padding: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 25px;
+  background: linear-gradient(35deg, #4b4b4bab 0%, #2222 100%);
+  box-sizing: border-box;
+}
+
+.cntctbox .three_fourth,
+.cntctbox .one_fourth {
+  margin-bottom: 0px;
+}
+
+.three_fourth,
+.one_fourth {
+  margin-right: 12%;
+  margin-bottom: 20px;
+  float: left;
+}
+
+.three_fourth {
+  width: 74%;
+  margin-top: 10px;
+}
+
+.three_fourth h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 27px;
+  font-weight: lighter;
+}
+
+.top10 {
+  text-align: left;
+  max-width: 500px;
+}
+
+.three_fourth h2 span.name {
+  font-weight: 600;
+}
+
+.lastcolumn {
+  margin-top: 5px;
+  margin-right: 0 !important;
+  clear: right;
+  min-height: 50px;
+}
+
+.btn {
+  position: absolute;
+  font-size: 20px;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffff;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.5);
+  transition: ease 0.5s;
+  padding: 5px 15px;
+  vertical-align: middle;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  color: #000000;
+  background: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.spacer {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.cntctbox p {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-family: "Lora", serif;
+  font-style: oblique;
+  font-size: 16px;
+}
+
+/****************************** CONTACT PAGE ******************************/
+
+.cntct-hero {
+  padding-top: 50px;
+  min-height: 520px;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.57), #222222),
+    url(../img/cntct-hero-back.jpg);
+  background-position: 0px 0px, 38% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.cntct-main-wrapper {
+  margin-top: 140px;
+  padding-right: 15%;
+  padding-left: 15%;
+  text-align: center;
+}
+
+.cntct-main-wrapper.w-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 420px;
+  min-height: 350px;
+}
+
+.cntct-main-wrapper .main-header {
+  font-family: "Montserrat", sans-serif;
+  font-size: 48px;
+  font-weight: bolder;
+  margin-bottom: 37px;
+  color: white;
+}
+
+.section.cntct {
+  padding: 40px auto;
+}
+
+.field {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.cntct-form {
+  max-width: 600px;
+  margin: auto;
+  padding: 0 10px;
+  overflow: hidden;
+}
+
+.cntct-form-text {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 20px 0;
+  border-radius: 5px;
+  border: 0;
+  background: #111111;
+  padding: 20px 40px;
+  outline: none;
+  color: #ffffff;
+  transition: 0.5s;
+}
+
+.cntct-form-text:focus {
+  box-shadow: 0 0 10px 4px #34495e;
+}
+
+textarea.cntct-form-text {
+  resize: none;
+  height: 120px;
+}
+
+.cntct-form-btn {
+  float: right;
+  border: 0px;
+  background: #34495e;
+  color: rgb(255, 255, 255);
+  padding: 12px 50px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.cntct-form-btn:hover {
+  background: #2980b9;
+}
+
+/****************************** THANK YOU PAGE ******************************/
+
+.thnku-hero {
+  padding-top: 50px;
+  min-height: 720px;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.67), #222222),
+    url(../img/cntct-hero-back.jpg);
+  background-position: 0px 0px, 38% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.thnku-text {
+  margin-top: 150px;
+  margin-bottom: 150px;
+  padding-right: 15%;
+  padding-left: 15%;
+  text-align: center;
+}
+
+.thnku-text.w-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 420px;
+  min-height: 350px;
+}
+
+.thnku-text h1 {
+  font-family: "Montserrrat", sans-serif;
+  font-size: 45px;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+}
+
+.thnku-text p {
+  font-family: "Lora", serif;
+  font-size: 20px;
+  line-height: 25px;
+  color: rgb(255, 255, 255);
+  margin-bottom: 25px;
+}
+
+span#timer {
+  font-family: "Lora", serif;
+  font-style: italic;
+  font-size: 12px;
+  color: rgb(255, 255, 255);
+}
+
+/* RESPONSIVE WEBPAGE FOR ALL SIZES BELOW */
+
+@media only screen and (max-width: 768px) {
+  .box-area li:nth-child(1) {
+    width: 80px;
+    height: 80px;
+  }
+  .box-area li:nth-child(3) {
+    width: 75px;
+    height: 75px;
+  }
+  .box-area li:nth-child(4) {
+    width: 90px;
+    height: 90px;
+  }
+  .box-area li:nth-child(6) {
+    width: 80px;
+    height: 80px;
+  }
+  .logo {
+    font-size: 20px;
+  }
+  .nav.w-nav {
+    padding: 30px 5%;
+  }
+  .nav.w-nav li a {
+    font-size: 10px;
+  }
+  .heading-wrapper.w-container {
+    max-width: 420px;
+    min-height: 320px;
+  }
+  .main-header {
+    font-size: 30px;
+  }
+  .button.w-button {
+    padding: 5px 10px;
+  }
+  a.w-button {
+    font-size: 14px;
+  }
+  .section-title {
+    font-size: 20px;
+  }
+  div.w-dyn-items.w-row {
+    text-align: center;
+    grid-template-columns: auto;
+    grid-column-gap: 10px;
+    padding: 10px 25px;
+  }
+  .ptfo-image {
+    width: 240px;
+  }
+  hr {
+    width: 668px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  /* Portfolio Page */
+  .nav.w-nav {
+    padding: 30px 5%;
+  }
+  div.w-dyn-items.w-row {
+    padding: 10px 25px;
+  }
+  .ptfo-image {
+    width: 300px;
+  }
+  hr {
+    width: 668px;
+  }
+  /* About Us Page */
+  .abtus.w-container {
+    width: 65%;
+  }
+  .abtus.desc-who {
+    width: 450px;
+  }
+  .desc-text {
+    text-indent: 0px;
+  }
+  .section {
+    margin-bottom: 10px;
+  }
+  .service-box {
+    max-width: 100%;
+  }
+  .abtus-cntct-box {
+    transform: translateX(-5px);
+  }
+  .cntctbox p {
+    font-size: 14px;
+    width: 610px;
+  }
+  .service-desc {
+    max-width: 340px;
+    padding-bottom: 20px;
+  }
+  .three_fourth h2 {
+    font-size: 24px;
+  }
+  .three_fourth {
+    margin-right: 35px;
+  }
+  .footer {
+    font-size: 10px;
+  }
+}

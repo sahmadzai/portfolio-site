@@ -1,0 +1,468 @@
+/* RULES */
+
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("../fonts/BebasNeue-Regular.otf");
+}
+
+/* END RULES */
+
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Teko", sans-serif;
+  background-color: #222222;
+}
+
+canvas {
+  display: block;
+}
+
+/* ALL NAVIGATION BAR STYLING AND ANIMATION */
+
+.nav.w-nav li a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+}
+
+.nav.w-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px 10%;
+}
+
+.nav {
+  padding-top: 45px;
+  background-color: transparent;
+}
+
+.w-nav {
+  position: relative;
+  background: transparent;
+  z-index: 1000;
+}
+
+/* Animation for the underline and "light up" on nav items after hovering mouse over */
+
+.underline::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s;
+}
+
+.underline:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+
+.nav_bar_links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav_bar_links li a:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+/* Upper left logo styling */
+
+.logo {
+  cursor: pointer;
+  margin-right: auto;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Bebas Neue", serif;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+/* Static underline under the active page */
+
+.nav_bar_links a#active {
+  border-bottom: 2px solid white;
+}
+
+.nav_bar_links {
+  list-style: none;
+}
+
+.nav_bar_links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+/* KABAB BISTRO TOP SECTION UNDERNEATH NAV BAR */
+
+.kbbistro.hero {
+  padding-top: 50px;
+  min-height: 320px;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.57), #222222),
+    url(../img/ptfo-hero-back.jpg);
+  background-position: 0px 0px, 38% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.kbbistro-heading-wrapper {
+  margin-top: 140px;
+  padding-right: 15%;
+  padding-left: 15%;
+  text-align: center;
+}
+
+.kbbistro-heading-wrapper.w-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 720px;
+  min-height: 350px;
+}
+
+.main-header {
+  font-family: "Lora", serif;
+  font-weight: 400;
+  font-size: 48px;
+  margin-bottom: 37px;
+  color: white;
+}
+
+.kbbistro-img {
+  border-radius: 10px;
+}
+
+.kbbistro.section {
+  padding: 10px 0;
+  margin-bottom: 25px;
+}
+
+.k-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 920px;
+  min-height: 300px;
+}
+
+.k-container h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+  margin-bottom: 25px;
+}
+
+.kbbistro-desc {
+  padding-bottom: 40px;
+  color: rgb(255, 255, 255);
+  line-height: 25px;
+  text-align: justify;
+  font-family: "Lora", serif;
+  font-size: 16px;
+}
+
+.k-container h4 {
+  width: fit-content;
+  margin: 0 auto;
+  padding: 10px 10px;
+  font-family: "Lora", serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  border: 3px dashed white;
+}
+
+/* NOORANI KABAB HOUSE TOP SECTION UNDERNEATH NAV BAR */
+
+.nkbh.hero {
+  padding-top: 50px;
+  min-height: 320px;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.57), #222222),
+    url(../img/ptfo-hero-back.jpg);
+  background-position: 0px 0px, 38% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.nkbh-heading-wrapper {
+  margin-top: 140px;
+  padding-right: 15%;
+  padding-left: 15%;
+  text-align: center;
+}
+
+.nkbh-heading-wrapper.w-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 720px;
+  min-height: 350px;
+}
+
+.nkbh-img {
+  border-radius: 10px;
+}
+
+.nkbh.section {
+  padding: 10px 0;
+  margin-bottom: 25px;
+}
+
+.nkbh-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 920px;
+  min-height: 360px;
+}
+
+.nkbh-container h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+  margin-bottom: 25px;
+}
+
+.nkbh-desc {
+  padding-bottom: 40px;
+  color: rgb(255, 255, 255);
+  line-height: 25px;
+  text-align: justify;
+  font-family: "Lora", serif;
+  font-size: 16px;
+}
+
+.nkbh-btn {
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 16px;
+  background: transparent;
+  border: 2px solid #00d6b4;
+  border-radius: 10px;
+  color: #00d6b4;
+  padding: 10px 18px;
+  transition: 0.5s ease;
+}
+
+.nkbh-btn:hover {
+  border: 1px solid white;
+  color: white;
+}
+
+/* End Racism Here Page */
+
+.edracism.hero {
+  padding-top: 50px;
+  min-height: 320px;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.57), #222222),
+    url(../img/ptfo-hero-back.jpg);
+  background-position: 0px 0px, 38% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.edracism-heading-wrapper {
+  margin-top: 140px;
+  padding-right: 15%;
+  padding-left: 15%;
+  text-align: center;
+}
+
+.edracism-heading-wrapper.w-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 720px;
+  min-height: 350px;
+}
+
+.main-header {
+  font-family: "Lora", serif;
+  font-weight: 400;
+  font-size: 48px;
+  margin-bottom: 37px;
+  color: white;
+}
+
+.edracism-img {
+  border-radius: 10px;
+}
+
+.edracism.section {
+  padding: 10px 0;
+  margin-bottom: 25px;
+}
+
+.edracism-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 920px;
+  min-height: 300px;
+}
+
+.edracism-container h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+  margin-bottom: 25px;
+}
+
+.edracism-desc {
+  padding-bottom: 40px;
+  color: rgb(255, 255, 255);
+  line-height: 25px;
+  text-align: justify;
+  font-family: "Lora", serif;
+  font-size: 16px;
+}
+
+.edracism-btn {
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 16px;
+  background: transparent;
+  border: 2px solid #00d6b4;
+  border-radius: 10px;
+  color: #00d6b4;
+  padding: 10px 18px;
+  transition: 0.5s ease;
+}
+
+.edracism-btn:hover {
+  border: 1px solid white;
+  color: white;
+}
+
+/* ALL PAGES FOOTER STYLING */
+
+.footer {
+  margin-top: 19px;
+  padding-top: 26px;
+  padding-bottom: 36px;
+  background-color: #222222;
+  color: #999999;
+  font-family: sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+  display: block;
+}
+
+.footer-text {
+  margin-bottom: 10px;
+  font-family: sans-serif;
+  line-height: 22px;
+  text-align: center;
+}
+
+hr {
+  margin: 0 auto;
+  width: 1620px;
+}
+
+/* RESPONSIVE WEBPAGE STYLING FOR ALL PAGES */
+
+@media only screen and (max-width: 768px) {
+  .logo {
+    font-size: 20px;
+  }
+  .nav.w-nav {
+    padding: 30px 5%;
+  }
+  .nav.w-nav li a {
+    font-size: 10px;
+  }
+  .main-header {
+    font-size: 30px;
+  }
+  .button.w-button {
+    padding: 5px 10px;
+  }
+  /* Kabab Bistro Portfolio Information */
+  .kbbistro-img {
+    width: 250px;
+  }
+  .kbbistro-heading-wrapper {
+    margin-top: 80px;
+  }
+  .kbbistro-heading-wrapper.w-container {
+    min-height: 250px;
+  }
+  .kbbistro.section {
+    padding: 30px 0;
+  }
+  .kbbistro-desc {
+    font-size: 14px;
+  }
+  .k-container {
+    max-width: 250px;
+    height: 650px;
+  }
+  .k-container h2 {
+    font-size: 14px;
+  }
+  /*Noorani Kabab Portfolio Information */
+  .nkbh-img {
+    width: 250px;
+  }
+  .nkbh-heading-wrapper {
+    margin-top: 80px;
+  }
+  .nkbh-heading-wrapper.w-container {
+    min-height: 250px;
+  }
+  .nkbh.section {
+    padding: 30px 0;
+  }
+  .nkbh-desc {
+    font-size: 14px;
+  }
+  .nkbh-container {
+    max-width: 300px;
+    height: 610px;
+  }
+  .nkbh-container h2 {
+    font-size: 14px;
+  }
+  .footer {
+    font-size: 10px;
+  }
+  /* EndRacismHere Portfolio Information */
+  .edracism-img {
+    width: 250px;
+  }
+  .edracism-heading-wrapper {
+    margin-top: 80px;
+  }
+  .edracism-heading-wrapper.w-container {
+    min-height: 250px;
+  }
+  .edracism.section {
+    padding: 30px 0;
+  }
+  .edracism-desc {
+    font-size: 14px;
+  }
+  .edracism-container {
+    max-width: 250px;
+    height: 500px;
+  }
+  .edracism-container h2 {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  /* Kabab Bistro Portfolio Information */
+  .kbbistro.section {
+    padding: 30px 0;
+  }
+  /*Noorani Kabab Portfolio Information */
+  .nkbh.section {
+    padding: 30px 0;
+  }
+}

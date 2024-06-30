@@ -9,6 +9,3 @@ php/*
 
 # Ignore vendor directory
 vendor/*
-
-# Ignore the demo directory for now
-demos/*
