@@ -9,3 +9,7 @@ php/*
 
 # Ignore vendor directory
 vendor/*
+
+# Ignore the app images directories for Boop! and Yoked!
+assets/imgs/boop_app/*
+assets/imgs/yoked_app/*
