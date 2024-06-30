@@ -4,6 +4,7 @@ body.dark-theme {
   --primary-color-faded2: rgba(18, 18, 18, 0.2);
   --primary-color-none: rgba(18, 18, 18, 0);
   --secondary-color: #faf9f6;
+  --blue-color: #005ebd;
   --accent-color: #ffc300;
   --quaternary-color: #d9d9d9;
   --quaternary-color-faded: rgba(217, 217, 217, 0.5);
@@ -17,6 +18,7 @@ body.light-theme {
   --primary-color-faded2: rgba(250, 249, 246, 0.2);
   --primary-color-none: rgba(250, 249, 246, 0);
   --secondary-color: #121212;
+  --blue-color: #005ebd;
   --accent-color: #ffc300;
   --quaternary-color: #d9d9d9;
   --quaternary-color-faded: rgba(217, 217, 217, 0.5);
@@ -1103,13 +1105,13 @@ input[type="radio"] {
   min-height: 50px;
   margin: 15px auto;
   font-size: 1rem;
-  color: var(--secondary-color);
+  color: var(--quaternary-color);
 }
 
-.portfolio-info p {
+.portfolio-info p.item-tags {
   margin: 0;
   font-size: 0.8rem;
-  color: var(--quaternary-color-faded);
+  color: var(--blue-color);
 }
 
 .portfolio-card:hover {
@@ -1505,6 +1507,18 @@ input[type="radio"] {
     font-size: 0.9rem;
   }
 
+  .portfolio-section .portfolio-item {
+    width: 50%;
+  }
+
+  .portfolio-section .portfolio-card {
+    height: 425px;
+  }
+
+  .portfolio-section .portfolio-card img {
+    max-height: 300px;
+  }
+
   .experience-section .experience-content #animated-edge {
     height: 1030px;
   }
@@ -1656,6 +1670,18 @@ input[type="radio"] {
     .currentproject-actions
     a {
     padding: 5px 10px;
+  }
+
+  .portfolio-section .portfolio-card {
+    height: 400px;
+  }
+
+  .portfolio-section .portfolio-card img {
+    max-height: 200px;
+  }
+
+  .portfolio-section .portfolio-card p.item-desc {
+    max-width: 95%;
   }
 
   .experience-section .experience-title {
@@ -1888,6 +1914,26 @@ input[type="radio"] {
     .currentproject-info {
     width: 90%;
     margin: 0 auto;
+  }
+
+  .portfolio-section {
+    padding-bottom: 25%;
+  }
+
+  .portfolio-section .portfolio-item {
+    width: 100%;
+  }
+
+  .portfolio-section .portfolio-card {
+    height: 420px;
+  }
+
+  .portfolio-section .portfolio-card img {
+    max-height: 230px;
+  }
+
+  .portfolio-section .portfolio-card p.item-desc {
+    max-width: 95%;
   }
 
   .experience-section {
