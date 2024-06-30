@@ -1390,10 +1390,6 @@ input[type="radio"] {
     height: 1030px;
   }
 
-  .footer .footer-content a {
-    font-size: 40px;
-  }
-
   .footer .footer-content p {
     font-size: 1rem;
   }
@@ -1558,10 +1554,6 @@ input[type="radio"] {
   .footer .gradient-blend {
     opacity: 0.5;
     height: 40%;
-  }
-
-  .footer .footer-content a {
-    font-size: 36px;
   }
 
   .footer .footer-content p {
@@ -1823,11 +1815,6 @@ input[type="radio"] {
   .footer .footer-content {
     flex-direction: column;
     align-items: center;
-  }
-
-  .footer .footer-content a {
-    font-size: 36px;
-    margin-bottom: 5%;
   }
 
   .footer .footer-content p {
