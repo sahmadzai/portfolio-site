@@ -361,7 +361,7 @@ nav.navbar {
   font-family: var(--primary-font);
 }
 
-.plan-price h1 {
+.plan-price h2 {
   margin-top: 50px;
   font-family: var(--primary-font);
   font-weight: 600;

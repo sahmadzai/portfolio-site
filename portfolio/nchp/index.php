@@ -103,7 +103,7 @@
     <section class="offer" id="services">
         <div class="row justify-content-center text-center">
             <div class="col-xxl-12">
-                <h1 class="what-we-offer"> Some Services We Offer</h1>
+                <h2 class="what-we-offer"> Some Services We Offer</h2>
             </div>
         </div>
         <div class="row ">
@@ -319,7 +319,7 @@
     <section class="price-container" id="pricing">
         <div class="row justify-content-center text-center">
             <div class="col-xxl-12">
-                <h1 class="pricing-font">Pricing</h1>
+                <h2 class="pricing-font">Pricing</h2>
                 <h3 class="pricing-sub">Choose the best tier for your needs</h3>
             </div>
         </div>
@@ -335,7 +335,7 @@
                         <p> Legislation Tracker </p>
                     </div>
                     <div class="plan-price text-center" style="margin-top: 38%;">
-                        <h1>$750</h1>
+                        <h2>$750</h2>
                         <p>/year</p>
                     </div>
                     <div class="text-center mt-5">
@@ -355,7 +355,7 @@
                         <p> Risk Assessment <span> <br> Contact us for Pricing <span></p>
                     </div>
                     <div class="plan-price text-center" style="margin-top: 24%;">
-                        <h1>$900</h1>
+                        <h2>$900</h2>
                         <p>/year</p>
                     </div>
                     <div class="text-center mt-5">
@@ -376,7 +376,7 @@
                         <p> Ekco Buisness Platform (Coming Soon) </p>
                     </div>
                     <div class="plan-price text-center">
-                        <h1>$1,100</h1>
+                        <h2>$1,100</h2>
                         <p> /year</p>
                     </div>
                     <div class="text-center mt-5">
@@ -398,7 +398,7 @@
     <!-- Layout will be an image on the right side of the page with text on the left side of the page -->
     <section class="cooperative-goals" id="goals">
         <div class="row justify-content-center">
-            <h1 class="cooperative-goals-title">Cooperative Goals</h1>
+            <h2 class="cooperative-goals-title">Cooperative Goals</h2>
             <div class="col-lg-6">
                 <ul class="cooperative-goals-list">
                     <li class="mb-2"> <span> Partnership Goal</span>: To create lifetime partnerships with our vendors,

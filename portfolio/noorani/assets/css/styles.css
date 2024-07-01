@@ -450,10 +450,10 @@ footer.unique-color-dark {
   text-align: center;
 }
 
-.catering-hero .hero-text h2 {
+.catering-hero .hero-text h1 {
   font-family: "Be Vietnam";
   font-weight: 700;
-  font-size: 38px;
+  font-size: 56px;
 }
 
 .catering-sec1 {
@@ -596,10 +596,10 @@ footer.unique-color-dark {
   text-align: center;
 }
 
-.contact-hero .hero-text h2 {
+.contact-hero .hero-text h1 {
   font-family: "Be Vietnam";
   font-weight: 700;
-  font-size: 38px;
+  font-size: 56px;
 }
 
 .contact-form .container {
@@ -699,13 +699,13 @@ footer.unique-color-dark {
   position: absolute;
   top: 35%;
   left: 50%;
-  transform: translate(-50%, -45%);
+  transform: translate(-50%, -50%);
 }
 
-.menu-hero .hero-text h3 {
+.menu-hero .hero-text h1 {
   font-family: "Be Vietnam";
   font-weight: 600;
-  font-size: 36px;
+  font-size: 56px;
 }
 
 .menu-sec1 .tab-content h6 {
@@ -995,12 +995,9 @@ footer.unique-color-dark {
   .catering-hero .hero-text {
     width: 100%;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%) !important;
-  }
-  .catering-hero .hero-text h2 {
-    font-size: 42px;
   }
 
   .catering-sec1 .container .desc {
@@ -1028,7 +1025,7 @@ footer.unique-color-dark {
   }
 
   .menu-hero .hero-text {
-    top: 40% !important;
+    top: 35% !important;
   }
 
   .contact-form .container {
